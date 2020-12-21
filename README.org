@@ -1,0 +1,3 @@
+* Research Helper
+** A repository of small python functions to reduce day to day overhead
+A lot of functionality that we rewrite almost daily still requires searching in an old repository to view how you wrote that one function. This repository is meant to make that a thing of the past by providing standard functions and snippets commonly used.
