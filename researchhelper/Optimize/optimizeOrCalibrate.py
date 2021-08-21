@@ -1,8 +1,13 @@
+"""Optimization algorithms."""
+
 import numpy as np
+import tqdm
 
 
-def metro_hast(tdata, N, simSetting, perturbSetting, simFunc, perturbFunc, scoreFunc):
-    """Metropolis hastings algorithm that samples parameter space"""
+def metro_hast(
+        tdata, N, simSetting, perturbSetting, simFunc, perturbFunc, scoreFunc
+):
+    """Metropolis hastings algorithm that samples parameter space."""
     # start simulation
     allData = [simFunc(**simSetting)[1]]
     scores = [scoreFunc(tdata, allData[-1])]

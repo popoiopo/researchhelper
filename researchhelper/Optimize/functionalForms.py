@@ -1,3 +1,5 @@
+"""Possible functional forms that can be used in system dynamics modelling."""
+
 import numpy as np
 
 
@@ -7,5 +9,5 @@ def sigmoid(x, height=1, base=0, shift=0.5, slope=10):
 
 
 def linear(x, a=1, b=0):
-    """Linear function"""
+    """Linear function."""
     return a * x + b
