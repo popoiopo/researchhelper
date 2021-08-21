@@ -104,19 +104,23 @@ def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
             E.g., as from output of `fig, ax = plt.subplots()`
         loc (int, optional): The location of the legend.
             The strings 'upper left', 'upper right', 'lower left',
-                'lower right' place the legend at the corresponding
-                corner of the axes/figure.
+            'lower right' place the legend at the corresponding
+            corner of the axes/figure.
+
             The strings 'upper center', 'lower center', 'center left',
-                'center right' place the legend at the center of the
-                corresponding edge of the axes/figure.
+            'center right' place the legend at the center of the
+            corresponding edge of the axes/figure.
+
             The string 'center' places the legend at the center of the
-                axes/figure.
+            axes/figure.
+
             The string 'best' places the legend at the location, among
-                the nine locations defined so far, with the minimum
-                overlap with other drawn artists. This option can be
-                quite slow for plots with large amounts of data; your
-                plotting speed may benefit from providing a specific
-                location. Defaults to 0.
+            the nine locations defined so far, with the minimum
+            overlap with other drawn artists. This option can be
+            quite slow for plots with large amounts of data; your
+            plotting speed may benefit from providing a specific
+            location. Defaults to 0.
+
         lr_loc (float, optional): Left-right location. Defaults to 1.05.
         ud_loc (int, optional): Up-down location. Defaults to 1.
         size (int, optional): Scaling the legend. Defaults to 16.

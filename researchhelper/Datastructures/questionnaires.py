@@ -72,9 +72,11 @@ class Mobility(BaseModel):
 class Loneliness(BaseModel):
     """Loneliness questionnaire answers.
 
-    Data is structures in a few categories  to find them easier:
-    q_ => metadata about questionnaire (e.g., timestamps)
-    l_ => loneliness questions
+    Data is structures in a few categories to find them easier, the following prefixes are defined:
+
+    q => metadata about questionnaire (e.g., timestamps)
+
+    l => loneliness questions
 
     Args:
         BaseModel (pydantic.BaseModel): Pydantic base dataclass
@@ -125,13 +127,19 @@ class Loneliness(BaseModel):
 class Topics(BaseModel):
     """Topics questionnaire answers.
 
-    Data is structures in a few categories  to find them easier:
-    q_ => metadata about questionnaire (e.g., timestamps)
-    v_ => questions about your feeling (voelen)
-    l_ => questions about physical attributes (lichamelijk)
-    p_ => questions about practical activities (praktisch)
-    m_ => questions about the mouth (mond)
-    z_ => questions about diseases (ziekte)
+    Data is structures in a few categories to find them easier the following prefixes are defined:
+
+    q => metadata about questionnaire (e.g., timestamps)
+
+    v => questions about your feeling (voelen)
+
+    l => questions about physical attributes (lichamelijk)
+
+    p => questions about practical activities (praktisch)
+
+    m => questions about the mouth (mond)
+
+    z => questions about diseases (ziekte)
 
     Args:
         BaseModel (pydantic.BaseModel): Pydantic base dataclass
