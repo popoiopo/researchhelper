@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1 Making a small test here &#8212; ResearchHelper 0.1.2 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to ResearchHelper’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Bas Chatel</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#making-a-small-test-here" id="id1">1 Making a small test here</a></p>
+<ul>
+<li><p><a class="reference internal" href="#analyse" id="id2">1.1 Analyse</a></p>
+<ul>
+<li><p><a class="reference internal" href="#distributions" id="id3">1.1.1 Distributions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#datastructures" id="id4">1.2 Datastructures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#networks" id="id5">1.2.1 Networks</a></p></li>
+<li><p><a class="reference internal" href="#questionnaire" id="id6">1.2.2 Questionnaire</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modeling" id="id7">1.3 Modeling</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ode-simulation" id="id8">1.3.1 ODE simulation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#optimize" id="id9">1.4 Optimize</a></p>
+<ul>
+<li><p><a class="reference internal" href="#functional-forms" id="id10">1.4.1 Functional forms</a></p></li>
+<li><p><a class="reference internal" href="#score-functions" id="id11">1.4.2 Score functions</a></p></li>
+<li><p><a class="reference internal" href="#optimization-or-calibration" id="id12">1.4.3 Optimization or Calibration</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#processdata" id="id13">1.5 ProcessData</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dataproc" id="id14">1.5.1 Dataproc</a></p></li>
+<li><p><a class="reference internal" href="#time-handeling" id="id15">1.5.2 Time handeling</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#visualize" id="id16">1.6 Visualize</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general-formatting" id="id17">1.6.1 General formatting</a></p></li>
+<li><p><a class="reference internal" href="#network-visualizations" id="id18">1.6.2 Network visualizations</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="making-a-small-test-here">
+<h1><a class="toc-backref" href="#id1">1 Making a small test here</a><a class="headerlink" href="#making-a-small-test-here" title="Permalink to this headline">¶</a></h1>
+<p>Testing with some math <span class="math notranslate nohighlight">\(A^T=\frac{1}{2}\)</span>. Ik zeg ook maar wat.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 19%" />
+<col style="width: 24%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>dit</p></th>
+<th class="head"><p>is</p></th>
+<th class="head"><p>een</p></th>
+<th class="head"><p>tabel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>6</p></td>
+<td><p>9</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>987</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>8</p></td>
+<td><p>087</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>876</p></td>
+<td><p>8</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="analyse">
+<h2><a class="toc-backref" href="#id2">1.1 Analyse</a><a class="headerlink" href="#analyse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="distributions">
+<h3><a class="toc-backref" href="#id3">1.1.1 Distributions</a><a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="datastructures">
+<h2><a class="toc-backref" href="#id4">1.2 Datastructures</a><a class="headerlink" href="#datastructures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="networks">
+<h3><a class="toc-backref" href="#id5">1.2.1 Networks</a><a class="headerlink" href="#networks" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="questionnaire">
+<h3><a class="toc-backref" href="#id6">1.2.2 Questionnaire</a><a class="headerlink" href="#questionnaire" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="modeling">
+<h2><a class="toc-backref" href="#id7">1.3 Modeling</a><a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ode-simulation">
+<h3><a class="toc-backref" href="#id8">1.3.1 ODE simulation</a><a class="headerlink" href="#ode-simulation" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="optimize">
+<h2><a class="toc-backref" href="#id9">1.4 Optimize</a><a class="headerlink" href="#optimize" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functional-forms">
+<h3><a class="toc-backref" href="#id10">1.4.1 Functional forms</a><a class="headerlink" href="#functional-forms" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="score-functions">
+<h3><a class="toc-backref" href="#id11">1.4.2 Score functions</a><a class="headerlink" href="#score-functions" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="optimization-or-calibration">
+<h3><a class="toc-backref" href="#id12">1.4.3 Optimization or Calibration</a><a class="headerlink" href="#optimization-or-calibration" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="processdata">
+<h2><a class="toc-backref" href="#id13">1.5 ProcessData</a><a class="headerlink" href="#processdata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dataproc">
+<h3><a class="toc-backref" href="#id14">1.5.1 Dataproc</a><a class="headerlink" href="#dataproc" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="time-handeling">
+<h3><a class="toc-backref" href="#id15">1.5.2 Time handeling</a><a class="headerlink" href="#time-handeling" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="visualize">
+<h2><a class="toc-backref" href="#id16">1.6 Visualize</a><a class="headerlink" href="#visualize" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-formatting">
+<h3><a class="toc-backref" href="#id17">1.6.1 General formatting</a><a class="headerlink" href="#general-formatting" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="network-visualizations">
+<h3><a class="toc-backref" href="#id18">1.6.2 Network visualizations</a><a class="headerlink" href="#network-visualizations" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ResearchHelper</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1 Making a small test here</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analyse">1.1 Analyse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distributions">1.1.1 Distributions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#datastructures">1.2 Datastructures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#networks">1.2.1 Networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#questionnaire">1.2.2 Questionnaire</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modeling">1.3 Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode-simulation">1.3.1 ODE simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#optimize">1.4 Optimize</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functional-forms">1.4.1 Functional forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#score-functions">1.4.2 Score functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optimization-or-calibration">1.4.3 Optimization or Calibration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#processdata">1.5 ProcessData</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataproc">1.5.1 Dataproc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-handeling">1.5.2 Time handeling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visualize">1.6 Visualize</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-formatting">1.6.1 General formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-visualizations">1.6.2 Network visualizations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter"><strong>Welcome to ResearchHelper’s documentation!</strong></a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Bas Chatel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/context.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

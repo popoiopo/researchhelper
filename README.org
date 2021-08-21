@@ -1,0 +1,28 @@
+* Making a small test here
+Testing with some math $A^T=\frac{1}{2}$. Ik zeg ook maar wat.
+|-----+----+-----+-------|
+| dit | is | een | tabel |
+|-----+----+-----+-------|
+|   3 |  6 |   7 |     9 |
+|   9 |  6 |   9 |     8 |
+|   6 |  5 |   5 |   987 |
+|   6 |  8 | 087 |     6 |
+| 876 |  8 |   8 |     9 |
+|-----+----+-----+-------|
+** Analyse
+*** Distributions
+** Datastructures
+*** Networks
+*** Questionnaire
+** Modeling
+*** ODE simulation
+** Optimize
+*** Functional forms
+*** Score functions
+*** Optimization or Calibration
+** ProcessData
+*** Dataproc
+*** Time handeling
+** Visualize
+*** General formatting
+*** Network visualizations
