@@ -1,5 +1,5 @@
 =========================
-Welcome to ResearchHelper
+Project Setup
 =========================
 
     :Author: Bas Chatel

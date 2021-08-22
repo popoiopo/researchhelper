@@ -1,4 +1,4 @@
-#+TITLE: Welcome to ResearchHelper
+#+TITLE: Project Setup
 #+AUTHOR: Bas Chatel
 #+OPTIONS: author:t toc:t
 
