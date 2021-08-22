@@ -103,6 +103,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="package_setup.html">Welcome to ResearchHelper</a></li>
 </ul>
 
             
@@ -186,12 +187,32 @@
 <dt id="researchhelper.Optimize.functionalForms.linear">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">linear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.functionalForms.linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Linear function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – </p></li>
+<li><p><strong>a</strong> – (Default value = 1)</p></li>
+<li><p><strong>b</strong> – (Default value = 0)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="researchhelper.Optimize.functionalForms.sigmoid">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">sigmoid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.functionalForms.sigmoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sigmoidal function that, using default values is bounded between [0,1] for both axes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – </p></li>
+<li><p><strong>height</strong> – (Default value = 1)</p></li>
+<li><p><strong>base</strong> – (Default value = 0)</p></li>
+<li><p><strong>shift</strong> – (Default value = 0.5)</p></li>
+<li><p><strong>slope</strong> – (Default value = 10)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -202,6 +223,19 @@
 <dt id="researchhelper.Optimize.optimizeOrCalibrate.metro_hast">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.optimizeOrCalibrate.</span></code><code class="sig-name descname"><span class="pre">metro_hast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoreFunc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.optimizeOrCalibrate.metro_hast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metropolis hastings algorithm that samples parameter space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tdata</strong> – </p></li>
+<li><p><strong>N</strong> – </p></li>
+<li><p><strong>simSetting</strong> – </p></li>
+<li><p><strong>perturbSetting</strong> – </p></li>
+<li><p><strong>simFunc</strong> – </p></li>
+<li><p><strong>perturbFunc</strong> – </p></li>
+<li><p><strong>scoreFunc</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -212,12 +246,28 @@
 <dt id="researchhelper.Optimize.scoreFunctions.MAD">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">MAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.scoreFunctions.MAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scorefunction mean absolute difference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tdata</strong> – </p></li>
+<li><p><strong>data</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="researchhelper.Optimize.scoreFunctions.NormalizedMAD">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">NormalizedMAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.scoreFunctions.NormalizedMAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scorefunction normalized mean absolute difference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tdata</strong> – </p></li>
+<li><p><strong>data</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

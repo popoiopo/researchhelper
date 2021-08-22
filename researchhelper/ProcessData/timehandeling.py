@@ -8,14 +8,21 @@ import re
 def extract_date(date):
     """Make datetime object from string.
 
-    Args:
-        date (str): A string in either ISO, epoch, or predefined format
+    Parameters
+    ----------
+    date : str
+        A string in either ISO, epoch, or predefined format
 
-    Raises:
-        ValueError: Raised when none of the formats are right.
+    Returns
+    -------
+    datetime.datetime
+        Python datetime format.
 
-    Returns:
-        datetime.datetime: Python datetime format.
+    Raises
+    ------
+    ValueError
+        Raised when none of the formats are right.
+
     """
     num_format = re.compile("^[\-]?[1-9][0-9]*\.?[0-9]+$")
 
@@ -46,18 +53,29 @@ def extract_date(date):
 def filterTimeStamps(relations, filterType: str, **kwargs):
     """Filter dates by their timestamps.
 
-    Args:
-        relations (List[Relationship, ...]): List containing the Relationship
-            pydantic dataclass. (see dataStructures.py for dataclass definition)
-        filterType (str): Information on how to filter.
-            Can be ["betweenWeeks", "inWeek", "betweenDates", "all"]
-        kwargs (dict): Provide {"begin": val, "end": val} in week numbers or
-             dates for "betweenWeeks" or "betweenDates" respectively. And provide
-             {"week": val} for "inWeek" to filter all in that specific week.
+    Parameters
+    ----------
+    relations : List[Relationship
+        List containing the Relationship
+        pydantic dataclass. (see dataStructures.py for dataclass definition)
+    filterType : str
+        Information on how to filter.
+        Can be ["betweenWeeks", "inWeek", "betweenDates", "all"]
+    kwargs : dict
+        Provide {"begin": val, "end": val} in week numbers or
+        dates for "betweenWeeks" or "betweenDates" respectively. And provide
+        {"week": val} for "inWeek" to filter all in that specific week.
+    filterType: str :
+        
+    **kwargs :
+        
 
-    Returns:
-        List[Relationships, ...]: List of relationships objects that fall within
-            a predefined timeframe.
+    Returns
+    -------
+    List[Relationships, ...]
+        List of relationships objects that fall within
+        a predefined timeframe.
+
     """
     if filterType == "betweenWeeks":
         return ([

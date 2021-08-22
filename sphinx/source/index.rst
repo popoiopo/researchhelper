@@ -22,6 +22,7 @@ A repository of small python functions to reduce day to day overhead. A lot of f
 
    summary
    modules
+   package_setup
 
 Indices and tables
 ==================

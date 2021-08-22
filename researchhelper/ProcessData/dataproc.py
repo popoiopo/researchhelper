@@ -4,7 +4,23 @@ import numpy as np
 
 
 def perturb(data, pmean, pstd, prem):
-    """Perturb the data."""
+    """Perturb the data.
+
+    Parameters
+    ----------
+    data :
+        
+    pmean :
+        
+    pstd :
+        
+    prem :
+        
+
+    Returns
+    -------
+
+    """
     # Perturb data
     data *= np.random.normal(pmean, pstd, data.shape)
 
@@ -15,7 +31,21 @@ def perturb(data, pmean, pstd, prem):
 
 
 def splitData(data, fraction_train=2 / 3, type_split="time"):
-    """Split data into seen (training set) and unseen (test set) data."""
+    """Split data into seen (training set) and unseen (test set) data.
+
+    Parameters
+    ----------
+    data :
+        
+    fraction_train :
+         (Default value = 2 / 3)
+    type_split :
+         (Default value = "time")
+
+    Returns
+    -------
+
+    """
     # Get a list of data indices
     nonnans = np.argwhere(~np.isnan(data))
     index = np.arange(len(nonnans))

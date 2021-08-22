@@ -103,6 +103,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="package_setup.html">Welcome to ResearchHelper</a></li>
 </ul>
 
             
@@ -186,12 +187,31 @@
 <dt id="researchhelper.ProcessData.dataproc.perturb">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.ProcessData.dataproc.</span></code><code class="sig-name descname"><span class="pre">perturb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pstd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.ProcessData.dataproc.perturb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perturb the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – </p></li>
+<li><p><strong>pmean</strong> – </p></li>
+<li><p><strong>pstd</strong> – </p></li>
+<li><p><strong>prem</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="researchhelper.ProcessData.dataproc.splitData">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.ProcessData.dataproc.</span></code><code class="sig-name descname"><span class="pre">splitData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction_train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'time'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.ProcessData.dataproc.splitData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split data into seen (training set) and unseen (test set) data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – </p></li>
+<li><p><strong>fraction_train</strong> – (Default value = 2 / 3)</p></li>
+<li><p><strong>type_split</strong> – (Default value = “time”)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -206,14 +226,14 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>date</strong> (<em>str</em>) – A string in either ISO, epoch, or predefined format</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Python datetime format.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>datetime.datetime</p>
+</dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – Raised when none of the formats are right.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Python datetime format.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>datetime.datetime</p>
 </dd>
 </dl>
 </dd></dl>
@@ -225,21 +245,20 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>relations</strong> (<em>List</em><em>[</em><a class="reference internal" href="researchhelper.Datastructures.html#researchhelper.Datastructures.networks.Relationship" title="researchhelper.Datastructures.networks.Relationship"><em>Relationship</em></a><em>, </em><em>..</em><em>]</em>) – List containing the Relationship
+<li><p><strong>relations</strong> (<em>List</em><em>[</em><a class="reference internal" href="researchhelper.Datastructures.html#researchhelper.Datastructures.networks.Relationship" title="researchhelper.Datastructures.networks.Relationship"><em>Relationship</em></a>) – List containing the Relationship
 pydantic dataclass. (see dataStructures.py for dataclass definition)</p></li>
-<li><p><strong>filterType</strong> (<em>str</em>) – Information on how to filter.
+<li><p><strong>filterType</strong> (<em>str :</em>) – Information on how to filter.
 Can be [“betweenWeeks”, “inWeek”, “betweenDates”, “all”]</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – Provide {“begin”: val, “end”: val} in week numbers or
 dates for “betweenWeeks” or “betweenDates” respectively. And provide
 {“week”: val} for “inWeek” to filter all in that specific week.</p></li>
+<li><p><strong>filterType</strong> – </p></li>
+<li><p><strong>**kwargs</strong> – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><dl class="simple">
-<dt>List of relationships objects that fall within</dt><dd><p>a predefined timeframe.</p>
-</dd>
-</dl>
-</p>
+<dd class="field-even"><p>List of relationships objects that fall within
+a predefined timeframe.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>List[Relationships, ..]</p>

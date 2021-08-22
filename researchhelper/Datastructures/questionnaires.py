@@ -71,15 +71,21 @@ class Mobility(BaseModel):
 
 class Loneliness(BaseModel):
     """Loneliness questionnaire answers.
-
+    
     Data is structures in a few categories to find them easier, the following prefixes are defined:
-
+    
     q => metadata about questionnaire (e.g., timestamps)
-
+    
     l => loneliness questions
 
-    Args:
-        BaseModel (pydantic.BaseModel): Pydantic base dataclass
+    Parameters
+    ----------
+    BaseModel : pydantic.BaseModel
+        Pydantic base dataclass
+
+    Returns
+    -------
+
     """
 
     q_start: datetime
@@ -120,29 +126,45 @@ class Loneliness(BaseModel):
 
     @validator('q_start', "q_end", pre=True)
     def time_validate(cls, v):
-        """Make sure that the date type formatting works out."""
+        """Make sure that the date type formatting works out.
+
+        Parameters
+        ----------
+        v :
+            
+
+        Returns
+        -------
+
+        """
         return datetime.fromisoformat(v)
 
 
 class Topics(BaseModel):
     """Topics questionnaire answers.
-
+    
     Data is structures in a few categories to find them easier the following prefixes are defined:
-
+    
     q => metadata about questionnaire (e.g., timestamps)
-
+    
     v => questions about your feeling (voelen)
-
+    
     l => questions about physical attributes (lichamelijk)
-
+    
     p => questions about practical activities (praktisch)
-
+    
     m => questions about the mouth (mond)
-
+    
     z => questions about diseases (ziekte)
 
-    Args:
-        BaseModel (pydantic.BaseModel): Pydantic base dataclass
+    Parameters
+    ----------
+    BaseModel : pydantic.BaseModel
+        Pydantic base dataclass
+
+    Returns
+    -------
+
     """
 
     q_start: datetime
@@ -202,5 +224,15 @@ class Topics(BaseModel):
 
     @validator('q_start', "q_end", pre=True)
     def time_validate(cls, v):
-        """Make sure that the date type formatting works out."""
+        """Make sure that the date type formatting works out.
+
+        Parameters
+        ----------
+        v :
+            
+
+        Returns
+        -------
+
+        """
         return datetime.fromisoformat(v)

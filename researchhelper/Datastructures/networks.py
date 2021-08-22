@@ -26,7 +26,17 @@ class Relationship(BaseModel):
 
     @validator("r_timestamp", pre=True)
     def time_validate(cls, v):
-        """Make sure that the date type formatting works out."""
+        """Make sure that the date type formatting works out.
+
+        Parameters
+        ----------
+        v :
+            
+
+        Returns
+        -------
+
+        """
         num_format = re.compile("^[\-]?[1-9][0-9]*\.?[0-9]+$")
 
         # all the formats the date might be in
@@ -54,12 +64,12 @@ class Relationship(BaseModel):
 
     @property
     def week(self):
-        """Return which week the timestamp occurs."""
+        """ """
         return self.r_timestamp.isocalendar().week
 
     @property
     def year(self):
-        """Return which week the timestamp occurs."""
+        """ """
         return self.r_timestamp.isocalendar().year
 
 

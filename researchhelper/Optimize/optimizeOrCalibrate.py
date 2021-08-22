@@ -7,7 +7,29 @@ import tqdm
 def metro_hast(
         tdata, N, simSetting, perturbSetting, simFunc, perturbFunc, scoreFunc
 ):
-    """Metropolis hastings algorithm that samples parameter space."""
+    """Metropolis hastings algorithm that samples parameter space.
+
+    Parameters
+    ----------
+    tdata :
+        
+    N :
+        
+    simSetting :
+        
+    perturbSetting :
+        
+    simFunc :
+        
+    perturbFunc :
+        
+    scoreFunc :
+        
+
+    Returns
+    -------
+
+    """
     # start simulation
     allData = [simFunc(**simSetting)[1]]
     scores = [scoreFunc(tdata, allData[-1])]

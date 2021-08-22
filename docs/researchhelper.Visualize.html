@@ -38,6 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Welcome to ResearchHelper" href="package_setup.html" />
     <link rel="prev" title="researchhelper.ProcessData package" href="researchhelper.ProcessData.html" /> 
 </head>
 
@@ -102,6 +103,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="package_setup.html">Welcome to ResearchHelper</a></li>
 </ul>
 
             
@@ -193,9 +195,9 @@ E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
 <li><p><strong>title</strong> (<em>str</em>) – Set graph title.</p></li>
 <li><p><strong>xlabel</strong> (<em>str</em>) – Set label for a-axis.</p></li>
 <li><p><strong>ylabel</strong> (<em>str</em>) – Set label for y-axis.</p></li>
-<li><p><strong>tick_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Set size for the ticks. Defaults to 20.</p></li>
-<li><p><strong>label_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Set size for the axes labels. Defaults to 20.</p></li>
-<li><p><strong>title_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Set size for the graph title. Defaults to 22.</p></li>
+<li><p><strong>tick_size</strong> (<em>int</em>) – Set size for the ticks. Defaults to 20.</p></li>
+<li><p><strong>label_size</strong> (<em>int</em>) – Set size for the axes labels. Defaults to 20.</p></li>
+<li><p><strong>title_size</strong> (<em>int</em>) – Set size for the graph title. Defaults to 22.</p></li>
 </ul>
 </dd>
 </dl>
@@ -212,25 +214,24 @@ by setting the loc, or a tuple made from lr_loc and ud_loc.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax</strong> (<em>matplotlib axis object</em>) – Standard matplotlib axis object.
 E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
-<li><p><strong>loc</strong> (<em>int</em><em>, </em><em>optional</em>) – <p>The location of the legend.
+<li><p><strong>loc</strong> (<em>int</em>) – The location of the legend.
 The strings ‘upper left’, ‘upper right’, ‘lower left’,
 ‘lower right’ place the legend at the corresponding
-corner of the axes/figure.</p>
-<p>The strings ‘upper center’, ‘lower center’, ‘center left’,
+corner of the axes/figure.
+The strings ‘upper center’, ‘lower center’, ‘center left’,
 ‘center right’ place the legend at the center of the
-corresponding edge of the axes/figure.</p>
-<p>The string ‘center’ places the legend at the center of the
-axes/figure.</p>
-<p>The string ‘best’ places the legend at the location, among
+corresponding edge of the axes/figure.
+The string ‘center’ places the legend at the center of the
+axes/figure.
+The string ‘best’ places the legend at the location, among
 the nine locations defined so far, with the minimum
 overlap with other drawn artists. This option can be
 quite slow for plots with large amounts of data; your
 plotting speed may benefit from providing a specific
-location. Defaults to 0.</p>
-</p></li>
-<li><p><strong>lr_loc</strong> (<em>float</em><em>, </em><em>optional</em>) – Left-right location. Defaults to 1.05.</p></li>
-<li><p><strong>ud_loc</strong> (<em>int</em><em>, </em><em>optional</em>) – Up-down location. Defaults to 1.</p></li>
-<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Scaling the legend. Defaults to 16.</p></li>
+location. Defaults to 0.</p></li>
+<li><p><strong>lr_loc</strong> (<em>float</em>) – Left-right location. Defaults to 1.05.</p></li>
+<li><p><strong>ud_loc</strong> (<em>int</em>) – Up-down location. Defaults to 1.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – Scaling the legend. Defaults to 16.</p></li>
 </ul>
 </dd>
 </dl>
@@ -245,21 +246,21 @@ location. Defaults to 0.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax</strong> (<em>matplotlib axis object</em>) – Standard matplotlib axis object.
 E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
-<li><p><strong>x_minor_td</strong> (<em>int</em><em>, </em><em>optional</em>) – Set grid minor tick distance.
+<li><p><strong>x_minor_td</strong> (<em>int</em>) – Set grid minor tick distance.
 This is in relation to the major grid. So a value of 2 result in
 there being 1 extra minor gridline halfway the major lines. 3, means
 at one-third, and two-thirds a minor line, etc. Defaults to 0.</p></li>
-<li><p><strong>x_major_td</strong> (<em>int</em><em>, </em><em>optional</em>) – Set grid major tick distance. Sets major
+<li><p><strong>x_major_td</strong> (<em>int</em>) – Set grid major tick distance. Sets major
 gridlines on multiples of this value. Defaults to 0.</p></li>
-<li><p><strong>y_major_td</strong> (<em>int</em><em>, </em><em>optional</em>) – Set locators for grid. See x_minor_td.
+<li><p><strong>y_major_td</strong> (<em>int</em>) – Set locators for grid. See x_minor_td.
 Defaults to 0.</p></li>
-<li><p><strong>y_minor_td</strong> (<em>int</em><em>, </em><em>optional</em>) – Set locators for grid. See x_major_td.
+<li><p><strong>y_minor_td</strong> (<em>int</em>) – Set locators for grid. See x_major_td.
 Defaults to 0.</p></li>
-<li><p><strong>x_lim</strong> (<em>int</em><em>, </em><em>optional</em>) – Viewport limit on x-axis. Defaults to 0.</p></li>
-<li><p><strong>y_lim</strong> (<em>int</em><em>, </em><em>optional</em>) – Viewport limit on y-axis. Defaults to 0.</p></li>
-<li><p><strong>lw</strong> (<em>int</em><em>, </em><em>optional</em>) – Line width of the grid. Defaults to 2.</p></li>
-<li><p><strong>major_alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Set alpha of major gridlines. Defaults to 0.9.</p></li>
-<li><p><strong>minor_alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Set alpha of minor gridlines. Defaults to 0.7.</p></li>
+<li><p><strong>x_lim</strong> (<em>int</em>) – Viewport limit on x-axis. Defaults to 0.</p></li>
+<li><p><strong>y_lim</strong> (<em>int</em>) – Viewport limit on y-axis. Defaults to 0.</p></li>
+<li><p><strong>lw</strong> (<em>int</em>) – Line width of the grid. Defaults to 2.</p></li>
+<li><p><strong>major_alpha</strong> (<em>float</em>) – Set alpha of major gridlines. Defaults to 0.9.</p></li>
+<li><p><strong>minor_alpha</strong> (<em>float</em>) – Set alpha of minor gridlines. Defaults to 0.7.</p></li>
 </ul>
 </dd>
 </dl>
@@ -281,16 +282,18 @@ Defaults to 0.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>im</strong> (<em>AxesImage</em>) – The AxesImage to be labeled.</p></li>
-<li><p><strong>data</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Data used to annotate.  If None, the image’s
+<li><p><strong>data</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Data used to annotate.  If None, the image’s
 data is used. Defaults to None.</p></li>
-<li><p><strong>valfmt</strong> (<em>str</em><em>, </em><em>optional</em>) – The format of the annotations inside the heatmap.
+<li><p><strong>valfmt</strong> (<em>str</em>) – The format of the annotations inside the heatmap.
 This should either use the string format method, e.g. “$ {x:.2f}”,
 or be a <cite>matplotlib.ticker.Formatter</cite>. Defaults to “{x:.2d}”.</p></li>
-<li><p><strong>textcolors</strong> (<em>tuple</em><em>, </em><em>optional</em>) – A pair of colors.  The first is used for values
+<li><p><strong>textcolors</strong> (<em>tuple</em>) – A pair of colors.  The first is used for values
 below a threshold, the second for those above. Defaults to (“black”, “white”).</p></li>
-<li><p><strong>threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – Value in data units according to which the colors from
+<li><p><strong>threshold</strong> (<em>float</em>) – Value in data units according to which the colors from
 textcolors are applied.  If None (the default) uses the middle of the colormap as
 separation. Defaults to None.</p></li>
+<li><p><strong>&quot;white&quot;</strong><strong>)</strong> – </p></li>
+<li><p><strong>**textkw</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -303,16 +306,16 @@ separation. Defaults to None.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>np.array</em><em>(</em><em>) </em><em>2d</em>) – A 2D numpy array of shape (N, M).</p></li>
+<li><p><strong>data</strong> (<em>np.array</em><em>(</em>) – A 2D numpy array of shape (N, M).</p></li>
 <li><p><strong>row_labels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A list or array of length N with the labels for the rows.</p></li>
 <li><p><strong>col_labels</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A list or array of length M with the labels for the columns.</p></li>
-<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes</em><em>, </em><em>optional</em>) – A <cite>matplotlib.axes.Axes</cite> instance to which the
+<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes</em>) – A <cite>matplotlib.axes.Axes</cite> instance to which the
 heatmap is plotted. If not provided, use current axes or create a new one. Defaults to None.</p></li>
-<li><p><strong>fig</strong> (<em>matplotlib.figure</em><em>, </em><em>optional</em>) – Matplotlib figure object. Defaults to None.</p></li>
-<li><p><strong>cbar_kw</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary with arguments to <cite>matplotlib.Figure.colorbar</cite>. Defaults to {}.</p></li>
-<li><p><strong>cbarlabel</strong> (<em>str</em><em>, </em><em>optional</em>) – The label for the colorbar. Defaults to “”.</p></li>
-<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title for subfigure. Defaults to “”.</p></li>
-<li><p><strong>**kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – All other arguments are forwarded to <cite>imshow</cite>.</p></li>
+<li><p><strong>fig</strong> (<em>matplotlib.figure</em>) – Matplotlib figure object. Defaults to None.</p></li>
+<li><p><strong>cbar_kw</strong> (<em>dict</em>) – A dictionary with arguments to <cite>matplotlib.Figure.colorbar</cite>. Defaults to {}.</p></li>
+<li><p><strong>cbarlabel</strong> (<em>str</em>) – The label for the colorbar. Defaults to “”.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title for subfigure. Defaults to “”.</p></li>
+<li><p><strong>**kwargs</strong> (<em>dict</em>) – All other arguments are forwarded to <cite>imshow</cite>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -326,12 +329,12 @@ heatmap is plotted. If not provided, use current axes or create a new one. Defau
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>full_graph</strong> (<em>nx.Graph</em>) – Networkx graph with all nodes and edges.</p></li>
-<li><p><strong>Gs</strong> (<em>List</em><em>[</em><em>nx.Graph</em><em>, </em><em>..</em><em>]</em>) – List of networkx graphs that change over time.</p></li>
-<li><p><strong>labels</strong> (<em>List</em><em>[</em><em>str</em><em>, </em><em>..</em><em>]</em>) – List of labels showing the current time.</p></li>
+<li><p><strong>Gs</strong> (<em>List</em><em>[</em><em>nx.Graph</em>) – List of networkx graphs that change over time.</p></li>
+<li><p><strong>labels</strong> (<em>List</em><em>[</em><em>str</em>) – List of labels showing the current time.</p></li>
 <li><p><strong>layout</strong> (<em>nx.__layout</em>) – Networkx layout.
 (e.g., nx.kamada_kawai_layout, nx.spring_layout)</p></li>
 <li><p><strong>save_path</strong> (<em>str</em>) – Where do you want to save your mp4?</p></li>
-<li><p><strong>remove_inactive_nodes</strong> (<em>bool</em><em>, </em><em>optional</em>) – True to remove inactive nodes.
+<li><p><strong>remove_inactive_nodes</strong> (<em>bool</em>) – True to remove inactive nodes.
 Otherwise full nodelist is always visible. Defaults to False.</p></li>
 </ul>
 </dd>
@@ -349,6 +352,8 @@ Otherwise full nodelist is always visible. Defaults to False.</p></li>
 <li><p><strong>dm</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>nx.__centrality function</em><em>]</em><em>]</em>) – 2d list of centrality measures.
 Shape will be same as grid for heatmap visualizations</p></li>
 <li><p><strong>cmaps</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>matplotlib colormaps</em><em>]</em><em>]</em>) – 2d list of same shape as dm.</p></li>
+<li><p><strong>suptitle</strong> – (Default value = “Degree measures over time”)</p></li>
+<li><p><strong>path</strong> – (Default value = “centralities.png”)</p></li>
 </ul>
 </dd>
 </dl>
@@ -358,6 +363,17 @@ Shape will be same as grid for heatmap visualizations</p></li>
 <dt id="researchhelper.Visualize.networks.plot_grid">
 <code class="sig-prename descclassname"><span class="pre">researchhelper.Visualize.networks.</span></code><code class="sig-name descname"><span class="pre">plot_grid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Visualize.networks.plot_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot grid network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> – </p></li>
+<li><p><strong>model</strong> – </p></li>
+<li><p><strong>layout</strong> – </p></li>
+<li><p><strong>with_labels</strong> – (Default value = False)</p></li>
+<li><p><strong>title</strong> – (Default value = ‘’)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -372,6 +388,7 @@ Shape will be same as grid for heatmap visualizations</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="package_setup.html" class="btn btn-neutral float-right" title="Welcome to ResearchHelper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="researchhelper.ProcessData.html" class="btn btn-neutral float-left" title="researchhelper.ProcessData package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

@@ -17,24 +17,39 @@ def setStandardFrame(
 ):
     """Implement helper function to standardize matplotlib graphs.
 
-    Args:
-        ax (matplotlib axis object): Standard matplotlib axis object.
-            E.g., as from output of `fig, ax = plt.subplots()`
-        x_minor_td (int, optional): Set grid minor tick distance.
-            This is in relation to the major grid. So a value of 2 result in
-            there being 1 extra minor gridline halfway the major lines. 3, means
-            at one-third, and two-thirds a minor line, etc. Defaults to 0.
-        x_major_td (int, optional): Set grid major tick distance. Sets major
-            gridlines on multiples of this value. Defaults to 0.
-        y_major_td (int, optional): Set locators for grid. See x_minor_td.
-            Defaults to 0.
-        y_minor_td (int, optional): Set locators for grid. See x_major_td.
-            Defaults to 0.
-        x_lim (int, optional): Viewport limit on x-axis. Defaults to 0.
-        y_lim (int, optional): Viewport limit on y-axis. Defaults to 0.
-        lw (int, optional): Line width of the grid. Defaults to 2.
-        major_alpha (float, optional): Set alpha of major gridlines. Defaults to 0.9.
-        minor_alpha (float, optional): Set alpha of minor gridlines. Defaults to 0.7.
+    Parameters
+    ----------
+    ax : matplotlib axis object
+        Standard matplotlib axis object.
+        E.g., as from output of `fig, ax = plt.subplots()`
+    x_minor_td : int
+        Set grid minor tick distance.
+        This is in relation to the major grid. So a value of 2 result in
+        there being 1 extra minor gridline halfway the major lines. 3, means
+        at one-third, and two-thirds a minor line, etc. Defaults to 0.
+    x_major_td : int
+        Set grid major tick distance. Sets major
+        gridlines on multiples of this value. Defaults to 0.
+    y_major_td : int
+        Set locators for grid. See x_minor_td.
+        Defaults to 0.
+    y_minor_td : int
+        Set locators for grid. See x_major_td.
+        Defaults to 0.
+    x_lim : int
+        Viewport limit on x-axis. Defaults to 0.
+    y_lim : int
+        Viewport limit on y-axis. Defaults to 0.
+    lw : int
+        Line width of the grid. Defaults to 2.
+    major_alpha : float
+        Set alpha of major gridlines. Defaults to 0.9.
+    minor_alpha : float
+        Set alpha of minor gridlines. Defaults to 0.7.
+
+    Returns
+    -------
+
     """
     # Remove ticks
     ax.yaxis.set_tick_params(which="both", length=0)
@@ -72,15 +87,27 @@ def setLabelsAndTitles(
 ):
     """Set the labels and titles of the graph including it's (tick)sizes.
 
-    Args:
-        ax (matplotlib axis object): Standard matplotlib axis object.
-            E.g., as from output of `fig, ax = plt.subplots()`
-        title (str): Set graph title.
-        xlabel (str): Set label for a-axis.
-        ylabel (str): Set label for y-axis.
-        tick_size (int, optional): Set size for the ticks. Defaults to 20.
-        label_size (int, optional): Set size for the axes labels. Defaults to 20.
-        title_size (int, optional): Set size for the graph title. Defaults to 22.
+    Parameters
+    ----------
+    ax : matplotlib axis object
+        Standard matplotlib axis object.
+        E.g., as from output of `fig, ax = plt.subplots()`
+    title : str
+        Set graph title.
+    xlabel : str
+        Set label for a-axis.
+    ylabel : str
+        Set label for y-axis.
+    tick_size : int
+        Set size for the ticks. Defaults to 20.
+    label_size : int
+        Set size for the axes labels. Defaults to 20.
+    title_size : int
+        Set size for the graph title. Defaults to 22.
+
+    Returns
+    -------
+
     """
     for tick in ax.xaxis.get_major_ticks():
         tick.label.set_fontsize(tick_size)
@@ -95,35 +122,41 @@ def setLabelsAndTitles(
 
 def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
     """Set legend for graphs.
-
+    
     You can set the legend either at a previously specified location
     by setting the loc, or a tuple made from lr_loc and ud_loc.
 
-    Args:
-        ax (matplotlib axis object): Standard matplotlib axis object.
-            E.g., as from output of `fig, ax = plt.subplots()`
-        loc (int, optional): The location of the legend.
-            The strings 'upper left', 'upper right', 'lower left',
-            'lower right' place the legend at the corresponding
-            corner of the axes/figure.
+    Parameters
+    ----------
+    ax : matplotlib axis object
+        Standard matplotlib axis object.
+        E.g., as from output of `fig, ax = plt.subplots()`
+    loc : int
+        The location of the legend.
+        The strings 'upper left', 'upper right', 'lower left',
+        'lower right' place the legend at the corresponding
+        corner of the axes/figure.
+        The strings 'upper center', 'lower center', 'center left',
+        'center right' place the legend at the center of the
+        corresponding edge of the axes/figure.
+        The string 'center' places the legend at the center of the
+        axes/figure.
+        The string 'best' places the legend at the location, among
+        the nine locations defined so far, with the minimum
+        overlap with other drawn artists. This option can be
+        quite slow for plots with large amounts of data; your
+        plotting speed may benefit from providing a specific
+        location. Defaults to 0.
+    lr_loc : float
+        Left-right location. Defaults to 1.05.
+    ud_loc : int
+        Up-down location. Defaults to 1.
+    size : int
+        Scaling the legend. Defaults to 16.
 
-            The strings 'upper center', 'lower center', 'center left',
-            'center right' place the legend at the center of the
-            corresponding edge of the axes/figure.
+    Returns
+    -------
 
-            The string 'center' places the legend at the center of the
-            axes/figure.
-
-            The string 'best' places the legend at the location, among
-            the nine locations defined so far, with the minimum
-            overlap with other drawn artists. This option can be
-            quite slow for plots with large amounts of data; your
-            plotting speed may benefit from providing a specific
-            location. Defaults to 0.
-
-        lr_loc (float, optional): Left-right location. Defaults to 1.05.
-        ud_loc (int, optional): Up-down location. Defaults to 1.
-        size (int, optional): Scaling the legend. Defaults to 16.
     """
     if loc == 0:
         ax.legend(bbox_to_anchor=(lr_loc, ud_loc), prop={"size": size})

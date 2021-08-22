@@ -10,7 +10,25 @@ import numpy as np
 
 
 def plot_grid(ax, model, layout, with_labels=False, title=''):
-    """Plot grid network."""
+    """Plot grid network.
+
+    Parameters
+    ----------
+    ax :
+        
+    model :
+        
+    layout :
+        
+    with_labels :
+         (Default value = False)
+    title :
+         (Default value = '')
+
+    Returns
+    -------
+
+    """
     cmap = plt.get_cmap("viridis")
     graph = model.G
     pos = layout(graph)
@@ -35,15 +53,26 @@ def plot_grid(ax, model, layout, with_labels=False, title=''):
 def nxNetworkMP4(full_graph, Gs, labels, layout, save_path, remove_inactive_nodes=False):
     """Create an MP4 from the network dynamics over time.
 
-    Args:
-        full_graph (nx.Graph): Networkx graph with all nodes and edges.
-        Gs (List[nx.Graph, ...]): List of networkx graphs that change over time.
-        labels (List[str, ...]): List of labels showing the current time.
-        layout (nx.__layout): Networkx layout.
-            (e.g., nx.kamada_kawai_layout, nx.spring_layout)
-        save_path (str): Where do you want to save your mp4?
-        remove_inactive_nodes (bool, optional): True to remove inactive nodes.
-            Otherwise full nodelist is always visible. Defaults to False.
+    Parameters
+    ----------
+    full_graph : nx.Graph
+        Networkx graph with all nodes and edges.
+    Gs : List[nx.Graph
+        List of networkx graphs that change over time.
+    labels : List[str
+        List of labels showing the current time.
+    layout : nx.__layout
+        Networkx layout.
+        (e.g., nx.kamada_kawai_layout, nx.spring_layout)
+    save_path : str
+        Where do you want to save your mp4?
+    remove_inactive_nodes : bool
+        True to remove inactive nodes.
+        Otherwise full nodelist is always visible. Defaults to False.
+
+    Returns
+    -------
+
     """
     assert len(Gs) == len(labels), "Desired (len(Gs) == len(labels))"
 
@@ -67,6 +96,27 @@ def nxNetworkMP4(full_graph, Gs, labels, layout, save_path, remove_inactive_node
     actors = [edges, nodes, text]
 
     def update(i: int, edges, nodes, text, pos, ax):
+        """
+
+        Parameters
+        ----------
+        i: int :
+            
+        edges :
+            
+        nodes :
+            
+        text :
+            
+        pos :
+            
+        ax :
+            
+
+        Returns
+        -------
+
+        """
         segments = [[pos[x], pos[y]] for x, y in Gs[i].edges()]
         edges.set_paths(segments)
         if remove_inactive_nodes:
@@ -88,17 +138,31 @@ def heatmap(data, row_labels, col_labels, ax=None, fig=None,
             cbar_kw={}, cbarlabel="", title="", **kwargs):
     """Create a heatmap from a numpy array and two lists of labels.
 
-    Args:
-        data (np.array() 2d): A 2D numpy array of shape (N, M).
-        row_labels (List[str]): A list or array of length N with the labels for the rows.
-        col_labels (List[str]): A list or array of length M with the labels for the columns.
-        ax (matplotlib.axes.Axes, optional): A `matplotlib.axes.Axes` instance to which the
-            heatmap is plotted. If not provided, use current axes or create a new one. Defaults to None.
-        fig (matplotlib.figure, optional): Matplotlib figure object. Defaults to None.
-        cbar_kw (dict, optional): A dictionary with arguments to `matplotlib.Figure.colorbar`. Defaults to {}.
-        cbarlabel (str, optional): The label for the colorbar. Defaults to "".
-        title (str, optional): Title for subfigure. Defaults to "".
-        **kwargs (dict, optional): All other arguments are forwarded to `imshow`.
+    Parameters
+    ----------
+    data : np.array(
+        A 2D numpy array of shape (N, M).
+    row_labels : List[str]
+        A list or array of length N with the labels for the rows.
+    col_labels : List[str]
+        A list or array of length M with the labels for the columns.
+    ax : matplotlib.axes.Axes
+        A `matplotlib.axes.Axes` instance to which the
+        heatmap is plotted. If not provided, use current axes or create a new one. Defaults to None.
+    fig : matplotlib.figure
+        Matplotlib figure object. Defaults to None.
+    cbar_kw : dict
+        A dictionary with arguments to `matplotlib.Figure.colorbar`. Defaults to {}.
+    cbarlabel : str
+        The label for the colorbar. Defaults to "".
+    title : str
+        Title for subfigure. Defaults to "".
+    **kwargs : dict
+        All other arguments are forwarded to `imshow`.
+
+    Returns
+    -------
+
     """
     if not ax:
         ax = plt.gca()
@@ -150,22 +214,36 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2d}",
                      textcolors=("black", "white"),
                      threshold=None, **textkw):
     """Annotate a heatmap.
-
+    
     Source:
         https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html
 
-    Args:
-        im (AxesImage): The AxesImage to be labeled.
-        data (List[str], optional): Data used to annotate.  If None, the image's
-            data is used. Defaults to None.
-        valfmt (str, optional): The format of the annotations inside the heatmap.
-            This should either use the string format method, e.g. "$ {x:.2f}",
-            or be a `matplotlib.ticker.Formatter`. Defaults to "{x:.2d}".
-        textcolors (tuple, optional): A pair of colors.  The first is used for values
-            below a threshold, the second for those above. Defaults to ("black", "white").
-        threshold (float, optional): Value in data units according to which the colors from
-            textcolors are applied.  If None (the default) uses the middle of the colormap as
-            separation. Defaults to None.
+    Parameters
+    ----------
+    im : AxesImage
+        The AxesImage to be labeled.
+    data : List[str]
+        Data used to annotate.  If None, the image's
+        data is used. Defaults to None.
+    valfmt : str
+        The format of the annotations inside the heatmap.
+        This should either use the string format method, e.g. "$ {x:.2f}",
+        or be a `matplotlib.ticker.Formatter`. Defaults to "{x:.2d}".
+    textcolors : tuple
+        A pair of colors.  The first is used for values
+        below a threshold, the second for those above. Defaults to ("black", "white").
+    threshold : float
+        Value in data units according to which the colors from
+        textcolors are applied.  If None (the default) uses the middle of the colormap as
+        separation. Defaults to None.
+    "white") :
+        
+    **textkw :
+        
+
+    Returns
+    -------
+
     """
     if not isinstance(data, (list, np.ndarray)):
         data = im.get_array()
@@ -202,11 +280,23 @@ def plotHeatmaps(gs, dm, cmaps, suptitle="Degree measures over time",
                  path="centralities.png"):
     """Plot network heatmap centrality mappings changing over time.
 
-    Args:
-        gs (List[nx.Graph]): List of networkx graphs over time.
-        dm (List[List[nx.__centrality function]]): 2d list of centrality measures.
-            Shape will be same as grid for heatmap visualizations
-        cmaps (List[List[matplotlib colormaps]]): 2d list of same shape as dm.
+    Parameters
+    ----------
+    gs : List[nx.Graph]
+        List of networkx graphs over time.
+    dm : List[List[nx.__centrality function]]
+        2d list of centrality measures.
+        Shape will be same as grid for heatmap visualizations
+    cmaps : List[List[matplotlib colormaps]]
+        2d list of same shape as dm.
+    suptitle :
+         (Default value = "Degree measures over time")
+    path :
+         (Default value = "centralities.png")
+
+    Returns
+    -------
+
     """
     fig, axes = plt.subplots(dm.shape[0], dm.shape[1], figsize=(30, 13.5))
     fig.suptitle(suptitle, fontsize=20)
