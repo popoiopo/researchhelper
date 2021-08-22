@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-with open('README.md') as f:
+with open('README.rst') as f:
     long_description = f.read()
 
 setup(
@@ -13,5 +13,5 @@ setup(
     long_description_content_type='text/x-rst',  # This is important!
     name='researchhelper',
     url='http://github.com/popoiopo/researchhelper',
-    version='0.1.4',
+    version='0.1.6',
 )
