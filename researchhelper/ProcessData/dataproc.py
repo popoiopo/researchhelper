@@ -8,17 +8,19 @@ def perturb(data, pmean, pstd, prem):
 
     Parameters
     ----------
-    data :
-        
-    pmean :
-        
-    pstd :
-        
-    prem :
-        
+    data : np.array
+        Data that you'd want to perturb.
+    pmean : float
+        Mean of the normal distribution that perturbs the data.
+    pstd : float
+        Standard deviation of normal distribution that perturbs the data.
+    prem : float
+        Ratio of datapoints that are to be removed randomly [0,1].
 
     Returns
     -------
+    data : np.array
+        Perturbed data.
 
     """
     # Perturb data
@@ -33,17 +35,25 @@ def perturb(data, pmean, pstd, prem):
 def splitData(data, fraction_train=2 / 3, type_split="time"):
     """Split data into seen (training set) and unseen (test set) data.
 
+    Returns two sets of equal dimensions with NaN at the places where
+    there is no data in that set. The two are complimentary.
+
     Parameters
     ----------
-    data :
-        
-    fraction_train :
-         (Default value = 2 / 3)
-    type_split :
-         (Default value = "time")
+    data : np.array
+        Data that you'd want to split.
+    fraction_train : float [0,1]
+        Fraction of data that is used as training data. (Default value = 2 / 3)
+    type_split : str
+        How to split the data, randomly or over time. Possible answers are:
+        ["random", "time"]. (Default value = "time")
 
     Returns
     -------
+    train : np.array
+        Training set.
+    test : np.array
+        Test set.
 
     """
     # Get a list of data indices

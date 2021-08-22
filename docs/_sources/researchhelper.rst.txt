@@ -7,12 +7,12 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   researchhelper.Analyse
-   researchhelper.Datastructures
-   researchhelper.Modeling
-   researchhelper.Optimize
-   researchhelper.ProcessData
-   researchhelper.Visualize
+   researchhelper.analyse
+   researchhelper.datastructures
+   researchhelper.modeling
+   researchhelper.optimize
+   researchhelper.processdata
+   researchhelper.visualize
 
 Module contents
 ---------------

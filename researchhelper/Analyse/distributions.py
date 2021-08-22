@@ -6,7 +6,7 @@ import scipy.stats.kde as kde
 
 def hpd_grid(sample, alpha=0.05, roundto=2):
     """Calculate highest posterior density (HPD) of array for given alpha.
-    
+
     The HPD is the minimum width Bayesian credible interval (BCI).
     The function works for multimodal distributions, returning more than one mode
 
@@ -21,8 +21,15 @@ def hpd_grid(sample, alpha=0.05, roundto=2):
 
     Returns
     -------
-
-    
+    hpd : np.array
+        Highest Posterior Density
+    x : list()
+        x-values of the Kernel Density Estimation (KDE)
+    y : list()
+        y-values of the KDE
+    modes : list()
+        List of locations from the modes of the distribution. Usually one
+        location, but also finds 2 if bimodal.
     """
     sample = np.asarray(sample)
     sample = sample[~np.isnan(sample)]

@@ -8,14 +8,15 @@ def MAD(tdata, data):
 
     Parameters
     ----------
-    tdata :
-        
-    data :
-        
+    tdata : np.array
+        Data to be fitted against simulation output.
+    data : np.array
+        Simulation output
 
     Returns
     -------
-
+    value : float
+        Score of Mean Absolute Difference.
     """
     abs_diff = np.abs(tdata - data)
     return abs_diff[~np.isnan(abs_diff)].mean()
@@ -26,13 +27,15 @@ def NormalizedMAD(tdata, data):
 
     Parameters
     ----------
-    tdata :
-        
-    data :
-        
+    tdata : np.array
+        Data to be fitted against simulation output.
+    data : np.array
+        Simulation output
 
     Returns
     -------
+    value : float
+        Score of Normalized Mean Absolute Difference.
 
     """
     abs_diff = np.abs(tdata - data) / tdata

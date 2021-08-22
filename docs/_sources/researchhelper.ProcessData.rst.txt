@@ -1,21 +1,21 @@
-researchhelper.ProcessData package
+researchhelper.processdata package
 ==================================
 
 Submodules
 ----------
 
-researchhelper.ProcessData.dataproc module
+researchhelper.processdata.dataproc module
 ------------------------------------------
 
-.. automodule:: researchhelper.ProcessData.dataproc
+.. automodule:: researchhelper.processdata.dataproc
    :members:
    :undoc-members:
    :show-inheritance:
 
-researchhelper.ProcessData.timehandeling module
+researchhelper.processdata.timehandeling module
 -----------------------------------------------
 
-.. automodule:: researchhelper.ProcessData.timehandeling
+.. automodule:: researchhelper.processdata.timehandeling
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ researchhelper.ProcessData.timehandeling module
 Module contents
 ---------------
 
-.. automodule:: researchhelper.ProcessData
+.. automodule:: researchhelper.processdata
    :members:
    :undoc-members:
    :show-inheritance:

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>researchhelper.Optimize package &mdash; ResearchHelper 0.1.2 documentation</title>
+  <title>researchhelper.optimize package &mdash; ResearchHelper 0.1.2 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="researchhelper.ProcessData package" href="researchhelper.ProcessData.html" />
-    <link rel="prev" title="researchhelper.Modeling package" href="researchhelper.Modeling.html" /> 
+    <link rel="next" title="researchhelper.processdata package" href="researchhelper.processdata.html" />
+    <link rel="prev" title="researchhelper.modeling package" href="researchhelper.modeling.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,12 +90,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">researchhelper</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="researchhelper.html">researchhelper package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="researchhelper.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.Analyse.html">researchhelper.Analyse package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.Datastructures.html">researchhelper.Datastructures package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.Modeling.html">researchhelper.Modeling package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">researchhelper.Optimize package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.ProcessData.html">researchhelper.ProcessData package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.Visualize.html">researchhelper.Visualize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.analyse.html">researchhelper.analyse package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.datastructures.html">researchhelper.datastructures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.modeling.html">researchhelper.modeling package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">researchhelper.optimize package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.processdata.html">researchhelper.processdata package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.visualize.html">researchhelper.visualize package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="researchhelper.html#module-researchhelper">Module contents</a></li>
@@ -156,13 +156,13 @@
         
           <li><a href="researchhelper.html">researchhelper package</a> &raquo;</li>
         
-      <li>researchhelper.Optimize package</li>
+      <li>researchhelper.optimize package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/researchhelper.Optimize.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/researchhelper.optimize.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,103 +176,137 @@
            <div itemprop="articleBody">
             
   <div class="section" id="researchhelper-optimize-package">
-<h1>researchhelper.Optimize package<a class="headerlink" href="#researchhelper-optimize-package" title="Permalink to this headline">¶</a></h1>
+<h1>researchhelper.optimize package<a class="headerlink" href="#researchhelper-optimize-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-researchhelper.Optimize.functionalForms">
-<span id="researchhelper-optimize-functionalforms-module"></span><h2>researchhelper.Optimize.functionalForms module<a class="headerlink" href="#module-researchhelper.Optimize.functionalForms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-researchhelper.optimize.functionalForms">
+<span id="researchhelper-optimize-functionalforms-module"></span><h2>researchhelper.optimize.functionalForms module<a class="headerlink" href="#module-researchhelper.optimize.functionalForms" title="Permalink to this headline">¶</a></h2>
 <p>Possible functional forms that can be used in system dynamics modelling.</p>
 <dl class="py function">
-<dt id="researchhelper.Optimize.functionalForms.linear">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">linear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.functionalForms.linear" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.optimize.functionalForms.linear">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">linear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.optimize.functionalForms.linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Linear function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – </p></li>
-<li><p><strong>a</strong> – (Default value = 1)</p></li>
-<li><p><strong>b</strong> – (Default value = 0)</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Input for function.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Slope of the line. (Default value = 1)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – The y-intercept. (Default value = 0)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>value</strong> – Calculated y-coordinate of linear function.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.Optimize.functionalForms.sigmoid">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">sigmoid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.functionalForms.sigmoid" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.optimize.functionalForms.sigmoid">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.optimize.functionalForms.</span></code><code class="sig-name descname"><span class="pre">sigmoid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.optimize.functionalForms.sigmoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sigmoidal function that, using default values is bounded between [0,1] for both axes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – </p></li>
-<li><p><strong>height</strong> – (Default value = 1)</p></li>
-<li><p><strong>base</strong> – (Default value = 0)</p></li>
-<li><p><strong>shift</strong> – (Default value = 0.5)</p></li>
-<li><p><strong>slope</strong> – (Default value = 10)</p></li>
+<li><p><strong>x</strong> (<em>int</em>) – Input for function.</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – Controls the height of the sigmoid. (Default value = 1).</p></li>
+<li><p><strong>base</strong> (<em>float</em>) – Controls the lowest point of the sigmoid. (Default value = 0)</p></li>
+<li><p><strong>shift</strong> (<em>float</em>) – Controls the shifting of the sigmoid (to left or right), the midpoint
+will end up here. (Default value = 0.5)</p></li>
+<li><p><strong>slope</strong> (<em>float</em>) – Controls the steepness or slope of the sigmoid. (Default value = 10)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>value</strong> – Calculated y-coordinate of sigmoid.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="module-researchhelper.Optimize.optimizeOrCalibrate">
-<span id="researchhelper-optimize-optimizeorcalibrate-module"></span><h2>researchhelper.Optimize.optimizeOrCalibrate module<a class="headerlink" href="#module-researchhelper.Optimize.optimizeOrCalibrate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-researchhelper.optimize.optimizeOrCalibrate">
+<span id="researchhelper-optimize-optimizeorcalibrate-module"></span><h2>researchhelper.optimize.optimizeOrCalibrate module<a class="headerlink" href="#module-researchhelper.optimize.optimizeOrCalibrate" title="Permalink to this headline">¶</a></h2>
 <p>Optimization algorithms.</p>
 <dl class="py function">
-<dt id="researchhelper.Optimize.optimizeOrCalibrate.metro_hast">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.optimizeOrCalibrate.</span></code><code class="sig-name descname"><span class="pre">metro_hast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoreFunc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.optimizeOrCalibrate.metro_hast" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.optimize.optimizeOrCalibrate.metro_hast">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.optimize.optimizeOrCalibrate.</span></code><code class="sig-name descname"><span class="pre">metro_hast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbSetting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbFunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoreFunc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.optimize.optimizeOrCalibrate.metro_hast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metropolis hastings algorithm that samples parameter space.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tdata</strong> – </p></li>
-<li><p><strong>N</strong> – </p></li>
-<li><p><strong>simSetting</strong> – </p></li>
-<li><p><strong>perturbSetting</strong> – </p></li>
-<li><p><strong>simFunc</strong> – </p></li>
-<li><p><strong>perturbFunc</strong> – </p></li>
-<li><p><strong>scoreFunc</strong> – </p></li>
+<li><p><strong>tdata</strong> (<em>np.array</em>) – True dataset on which the score function calculates its value.</p></li>
+<li><p><strong>N</strong> (<em>int</em>) – Number of iterations the metropolist hastings algorithm performs.</p></li>
+<li><p><strong>simSetting</strong> (<em>dict</em>) – Dictionary of settings needed for the simulation.</p></li>
+<li><p><strong>perturbSetting</strong> (<em>dict</em>) – Dictionary of settings needed for the perturbation function.</p></li>
+<li><p><strong>simFunc</strong> (<em>function</em>) – Function that performs the actual simulation with np.array output.</p></li>
+<li><p><strong>perturbFunc</strong> (<em>function</em>) – Function that perturbs variable inputs into simulation function.</p></li>
+<li><p><strong>scoreFunc</strong> (<em>function</em>) – Function that calculates a score from the fit between real data and
+simulated data.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>simSettings</strong> (<em>np.array</em>) – Set of variable settings that were sampled.</p></li>
+<li><p><strong>allData</strong> (<em>np.array</em>) – Generated data from the previous settings.</p></li>
+<li><p><strong>scores</strong> (<em>np.array</em>) – Scores according to provided score function regarding data fit.</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="module-researchhelper.Optimize.scoreFunctions">
-<span id="researchhelper-optimize-scorefunctions-module"></span><h2>researchhelper.Optimize.scoreFunctions module<a class="headerlink" href="#module-researchhelper.Optimize.scoreFunctions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-researchhelper.optimize.scoreFunctions">
+<span id="researchhelper-optimize-scorefunctions-module"></span><h2>researchhelper.optimize.scoreFunctions module<a class="headerlink" href="#module-researchhelper.optimize.scoreFunctions" title="Permalink to this headline">¶</a></h2>
 <p>File providing some score functions to be used in optimization.</p>
 <dl class="py function">
-<dt id="researchhelper.Optimize.scoreFunctions.MAD">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">MAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.scoreFunctions.MAD" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.optimize.scoreFunctions.MAD">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">MAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.optimize.scoreFunctions.MAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scorefunction mean absolute difference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tdata</strong> – </p></li>
-<li><p><strong>data</strong> – </p></li>
+<li><p><strong>tdata</strong> (<em>np.array</em>) – Data to be fitted against simulation output.</p></li>
+<li><p><strong>data</strong> (<em>np.array</em>) – Simulation output</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>value</strong> – Score of Mean Absolute Difference.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.Optimize.scoreFunctions.NormalizedMAD">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.Optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">NormalizedMAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.Optimize.scoreFunctions.NormalizedMAD" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.optimize.scoreFunctions.NormalizedMAD">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.optimize.scoreFunctions.</span></code><code class="sig-name descname"><span class="pre">NormalizedMAD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.optimize.scoreFunctions.NormalizedMAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scorefunction normalized mean absolute difference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tdata</strong> – </p></li>
-<li><p><strong>data</strong> – </p></li>
+<li><p><strong>tdata</strong> (<em>np.array</em>) – Data to be fitted against simulation output.</p></li>
+<li><p><strong>data</strong> (<em>np.array</em>) – Simulation output</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>value</strong> – Score of Normalized Mean Absolute Difference.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="module-researchhelper.Optimize">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-researchhelper.Optimize" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-researchhelper.optimize">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-researchhelper.optimize" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -282,8 +316,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="researchhelper.ProcessData.html" class="btn btn-neutral float-right" title="researchhelper.ProcessData package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="researchhelper.Modeling.html" class="btn btn-neutral float-left" title="researchhelper.Modeling package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="researchhelper.processdata.html" class="btn btn-neutral float-right" title="researchhelper.processdata package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="researchhelper.modeling.html" class="btn btn-neutral float-left" title="researchhelper.modeling package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

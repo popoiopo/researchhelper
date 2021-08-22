@@ -1,21 +1,21 @@
-researchhelper.Visualize package
+researchhelper.visualize package
 ================================
 
 Submodules
 ----------
 
-researchhelper.Visualize.general\_formatting module
+researchhelper.visualize.general\_formatting module
 ---------------------------------------------------
 
-.. automodule:: researchhelper.Visualize.general_formatting
+.. automodule:: researchhelper.visualize.general_formatting
    :members:
    :undoc-members:
    :show-inheritance:
 
-researchhelper.Visualize.networks module
+researchhelper.visualize.networks module
 ----------------------------------------
 
-.. automodule:: researchhelper.Visualize.networks
+.. automodule:: researchhelper.visualize.networks
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ researchhelper.Visualize.networks module
 Module contents
 ---------------
 
-.. automodule:: researchhelper.Visualize
+.. automodule:: researchhelper.visualize
    :members:
    :undoc-members:
    :show-inheritance:

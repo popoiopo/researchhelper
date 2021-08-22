@@ -1,8 +1,9 @@
-__version__ = "0.1.0"
+"""__init__.py initiation file."""
 
-from .Analyse import *
-from .Datastructures import *
-from .Modeling import *
-from .Optimize import *
-from .ProcessData import *
-from .Visualize import *
+from .analyse import *
+from .datastructures import *
+from .decorators import *
+from .modeling import *
+from .optimize import *
+from .processdata import *
+from .visualize import *

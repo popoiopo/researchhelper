@@ -1,13 +1,13 @@
-researchhelper.Modeling package
+researchhelper.modeling package
 ===============================
 
 Submodules
 ----------
 
-researchhelper.Modeling.ode module
+researchhelper.modeling.ode module
 ----------------------------------
 
-.. automodule:: researchhelper.Modeling.ode
+.. automodule:: researchhelper.modeling.ode
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ researchhelper.Modeling.ode module
 Module contents
 ---------------
 
-.. automodule:: researchhelper.Modeling
+.. automodule:: researchhelper.modeling
    :members:
    :undoc-members:
    :show-inheritance:

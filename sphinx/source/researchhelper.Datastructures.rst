@@ -1,21 +1,21 @@
-researchhelper.Datastructures package
+researchhelper.datastructures package
 =====================================
 
 Submodules
 ----------
 
-researchhelper.Datastructures.networks module
+researchhelper.datastructures.networks module
 ---------------------------------------------
 
-.. automodule:: researchhelper.Datastructures.networks
+.. automodule:: researchhelper.datastructures.networks
    :members:
    :undoc-members:
    :show-inheritance:
 
-researchhelper.Datastructures.questionnaires module
+researchhelper.datastructures.questionnaires module
 ---------------------------------------------------
 
-.. automodule:: researchhelper.Datastructures.questionnaires
+.. automodule:: researchhelper.datastructures.questionnaires
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ researchhelper.Datastructures.questionnaires module
 Module contents
 ---------------
 
-.. automodule:: researchhelper.Datastructures
+.. automodule:: researchhelper.datastructures
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,13 +1,13 @@
-researchhelper.Analyse package
+researchhelper.analyse package
 ==============================
 
 Submodules
 ----------
 
-researchhelper.Analyse.distributions module
+researchhelper.analyse.distributions module
 -------------------------------------------
 
-.. automodule:: researchhelper.Analyse.distributions
+.. automodule:: researchhelper.analyse.distributions
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ researchhelper.Analyse.distributions module
 Module contents
 ---------------
 
-.. automodule:: researchhelper.Analyse
+.. automodule:: researchhelper.analyse
    :members:
    :undoc-members:
    :show-inheritance:

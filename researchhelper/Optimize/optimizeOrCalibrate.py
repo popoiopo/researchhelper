@@ -11,24 +11,30 @@ def metro_hast(
 
     Parameters
     ----------
-    tdata :
-        
-    N :
-        
-    simSetting :
-        
-    perturbSetting :
-        
-    simFunc :
-        
-    perturbFunc :
-        
-    scoreFunc :
-        
+    tdata : np.array
+        True dataset on which the score function calculates its value.
+    N : int
+        Number of iterations the metropolist hastings algorithm performs.
+    simSetting : dict
+        Dictionary of settings needed for the simulation.
+    perturbSetting : dict
+        Dictionary of settings needed for the perturbation function.
+    simFunc : function
+        Function that performs the actual simulation with np.array output.
+    perturbFunc : function
+        Function that perturbs variable inputs into simulation function.
+    scoreFunc : function
+        Function that calculates a score from the fit between real data and
+        simulated data.
 
     Returns
     -------
-
+    simSettings : np.array
+        Set of variable settings that were sampled.
+    allData : np.array
+        Generated data from the previous settings.
+    scores : np.array
+        Scores according to provided score function regarding data fit.
     """
     # start simulation
     allData = [simFunc(**simSetting)[1]]

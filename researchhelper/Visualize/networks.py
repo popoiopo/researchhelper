@@ -14,19 +14,22 @@ def plot_grid(ax, model, layout, with_labels=False, title=''):
 
     Parameters
     ----------
-    ax :
-        
-    model :
-        
-    layout :
-        
-    with_labels :
-         (Default value = False)
-    title :
-         (Default value = '')
+    ax : matplotlib.axis
+        Matplotlib axis to plot in.
+    model : Mesa.model
+        Mesa agent-based model object.
+    layout : nx.__layout
+        Networkx layout.
+        (e.g., nx.kamada_kawai_layout, nx.spring_layout)
+    with_labels : boolean
+        True or false boolean on whether or not to show labels.
+        (Default value = False)
+    title : str
+        Title of the plot. (Default value = '')
 
     Returns
     -------
+    None
 
     """
     cmap = plt.get_cmap("viridis")
@@ -72,6 +75,7 @@ def nxNetworkMP4(full_graph, Gs, labels, layout, save_path, remove_inactive_node
 
     Returns
     -------
+    None
 
     """
     assert len(Gs) == len(labels), "Desired (len(Gs) == len(labels))"
@@ -100,21 +104,23 @@ def nxNetworkMP4(full_graph, Gs, labels, layout, save_path, remove_inactive_node
 
         Parameters
         ----------
-        i: int :
-            
-        edges :
-            
-        nodes :
-            
-        text :
-            
-        pos :
-            
-        ax :
-            
+        i: int
+            Index of frames.
+        edges : np.array
+            List of edge locations of previous step.
+        nodes : np.array
+            List of node locations of previous step.
+        text : str
+            Text to be shown in upper right corner at each update.
+        pos : dict
+            Networkx - Matplotlib positional layout dictionary.
+        ax : matplotlib.axis
+            Matplotlib axis to plot in.
+
 
         Returns
         -------
+        None
 
         """
         segments = [[pos[x], pos[y]] for x, y in Gs[i].edges()]
@@ -162,6 +168,10 @@ def heatmap(data, row_labels, col_labels, ax=None, fig=None,
 
     Returns
     -------
+    im : matplotlib.axis.imshow
+        The heatmap object.
+    cb : fig.colorbar
+        The matplotlib colorbar object as a color legend.
 
     """
     if not ax:
@@ -214,7 +224,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2d}",
                      textcolors=("black", "white"),
                      threshold=None, **textkw):
     """Annotate a heatmap.
-    
+
     Source:
         https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html
 
@@ -237,12 +247,14 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2d}",
         textcolors are applied.  If None (the default) uses the middle of the colormap as
         separation. Defaults to None.
     "white") :
-        
+
     **textkw :
-        
+
 
     Returns
     -------
+    texts : List[str]
+        The texts that go in each cell of the heatmap.
 
     """
     if not isinstance(data, (list, np.ndarray)):
@@ -296,6 +308,7 @@ def plotHeatmaps(gs, dm, cmaps, suptitle="Degree measures over time",
 
     Returns
     -------
+    None
 
     """
     fig, axes = plt.subplots(dm.shape[0], dm.shape[1], figsize=(30, 13.5))

@@ -49,6 +49,7 @@ def setStandardFrame(
 
     Returns
     -------
+    None
 
     """
     # Remove ticks
@@ -107,6 +108,7 @@ def setLabelsAndTitles(
 
     Returns
     -------
+    None
 
     """
     for tick in ax.xaxis.get_major_ticks():
@@ -122,7 +124,7 @@ def setLabelsAndTitles(
 
 def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
     """Set legend for graphs.
-    
+
     You can set the legend either at a previously specified location
     by setting the loc, or a tuple made from lr_loc and ud_loc.
 
@@ -156,6 +158,7 @@ def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
 
     Returns
     -------
+    None
 
     """
     if loc == 0:

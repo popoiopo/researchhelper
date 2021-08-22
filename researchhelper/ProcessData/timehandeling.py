@@ -65,10 +65,14 @@ def filterTimeStamps(relations, filterType: str, **kwargs):
         Provide {"begin": val, "end": val} in week numbers or
         dates for "betweenWeeks" or "betweenDates" respectively. And provide
         {"week": val} for "inWeek" to filter all in that specific week.
-    filterType: str :
-        
-    **kwargs :
-        
+    filterType: str
+        How do you want to filter the relations? Possible input is:
+        "betweenWeeks" - Provide kwargs["begin], kwargs["end"] in integer weekdays.
+        "inWeek" - Provide kwargs["week"] for filtering out a specific week.
+        "betweenDates" - Provide kwargs["begin], kwargs["end"] as dates to filter between dates.
+        "all" - Get all relations back, no kwargs required.
+    **kwargs : str or int
+        Input for filter, see filterType for more information.
 
     Returns
     -------
