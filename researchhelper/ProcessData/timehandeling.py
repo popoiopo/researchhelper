@@ -45,12 +45,12 @@ def extract_date(date):
         # Last resort => ISO format
         try:
             return datetime.fromisoformat(date)
-        except:
+        except ValueError:
             raise ValueError(f"{date} was not in one of the approved formats.")
     raise ValueError(f"{date} was not in one of the approved formats.")
 
 
-def filterTimeStamps(relations, filterType: str, **kwargs):
+def filter_timestamps(relations, filter_type: str, **kwargs):
     """Filter dates by their timestamps.
 
     Parameters
@@ -58,21 +58,21 @@ def filterTimeStamps(relations, filterType: str, **kwargs):
     relations : List[Relationship
         List containing the Relationship
         pydantic dataclass. (see dataStructures.py for dataclass definition)
-    filterType : str
+    filter_type : str
         Information on how to filter.
         Can be ["betweenWeeks", "inWeek", "betweenDates", "all"]
     kwargs : dict
         Provide {"begin": val, "end": val} in week numbers or
         dates for "betweenWeeks" or "betweenDates" respectively. And provide
         {"week": val} for "inWeek" to filter all in that specific week.
-    filterType: str
+    filter_type: str
         How do you want to filter the relations? Possible input is:
         "betweenWeeks" - Provide kwargs["begin], kwargs["end"] in integer weekdays.
         "inWeek" - Provide kwargs["week"] for filtering out a specific week.
         "betweenDates" - Provide kwargs["begin], kwargs["end"] as dates to filter between dates.
         "all" - Get all relations back, no kwargs required.
     **kwargs : str or int
-        Input for filter, see filterType for more information.
+        Input for filter, see filter_type for more information.
 
     Returns
     -------
@@ -81,19 +81,19 @@ def filterTimeStamps(relations, filterType: str, **kwargs):
         a predefined timeframe.
 
     """
-    if filterType == "betweenWeeks":
+    if filter_type == "betweenWeeks":
         return ([
             i for i in relations
             if kwargs["begin"] < i.week < kwargs["end"]
         ])
-    elif filterType == "inWeek":
+    elif filter_type == "inWeek":
         return ([
             i for i in relations if kwargs["week"] == i.week
         ])
-    elif filterType == "betweenDates":
+    elif filter_type == "betweenDates":
         return ([
             i for i in relations if extract_date(kwargs["begin"])
             < i.r_timestamp < extract_date(kwargs["end"])
         ])
-    elif filterType == "all":
+    elif filter_type == "all":
         return relations

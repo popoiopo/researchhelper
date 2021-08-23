@@ -22,7 +22,7 @@ def MAD(tdata, data):
     return abs_diff[~np.isnan(abs_diff)].mean()
 
 
-def NormalizedMAD(tdata, data):
+def normalized_MAD(tdata, data):
     """Scorefunction normalized mean absolute difference.
 
     Parameters

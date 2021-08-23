@@ -53,7 +53,7 @@ def plot_grid(ax, model, layout, with_labels=False, title=''):
     return
 
 
-def nxNetworkMP4(full_graph, Gs, labels, layout, save_path, remove_inactive_nodes=False):
+def nx_network_mp4(full_graph, Gs, labels, layout, save_path, remove_inactive_nodes=False):
     """Create an MP4 from the network dynamics over time.
 
     Parameters
@@ -288,7 +288,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2d}",
     return texts
 
 
-def plotHeatmaps(gs, dm, cmaps, suptitle="Degree measures over time",
+def plot_heatmaps(gs, dm, cmaps, suptitle="Degree measures over time",
                  path="centralities.png"):
     """Plot network heatmap centrality mappings changing over time.
 

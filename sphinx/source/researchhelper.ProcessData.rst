@@ -12,6 +12,14 @@ researchhelper.processdata.dataproc module
    :undoc-members:
    :show-inheritance:
 
+researchhelper.processdata.networks module
+------------------------------------------
+
+.. automodule:: researchhelper.processdata.networks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 researchhelper.processdata.timehandeling module
 -----------------------------------------------
 

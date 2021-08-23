@@ -4,7 +4,7 @@ from scipy.integrate import odeint
 import numpy as np
 
 
-def ODESimulation(ODE, timesteps, resolution, y0, a, f):
+def ode_simulation(ODE, timesteps, resolution, y0, a, f):
     """Set up an ODE simulation.
 
     Parameters

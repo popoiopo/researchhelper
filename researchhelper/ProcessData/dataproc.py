@@ -32,7 +32,7 @@ def perturb(data, pmean, pstd, prem):
     return data
 
 
-def splitData(data, fraction_train=2 / 3, type_split="time"):
+def split_data(data, fraction_train=2 / 3, type_split="time"):
     """Split data into seen (training set) and unseen (test set) data.
 
     Returns two sets of equal dimensions with NaN at the places where

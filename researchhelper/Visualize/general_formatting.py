@@ -3,7 +3,7 @@
 from matplotlib.ticker import AutoMinorLocator, MultipleLocator
 
 
-def setStandardFrame(
+def set_frame(
     ax,
     x_major_td=0,
     x_minor_td=0,
@@ -47,10 +47,6 @@ def setStandardFrame(
     minor_alpha : float
         Set alpha of minor gridlines. Defaults to 0.7.
 
-    Returns
-    -------
-    None
-
     """
     # Remove ticks
     ax.yaxis.set_tick_params(which="both", length=0)
@@ -83,7 +79,7 @@ def setStandardFrame(
         ax.spines[spine].set_visible(False)
 
 
-def setLabelsAndTitles(
+def set_labels_and_titles(
     ax, title, xlabel, ylabel, tick_size=20, label_size=20, title_size=22
 ):
     """Set the labels and titles of the graph including it's (tick)sizes.
@@ -106,10 +102,6 @@ def setLabelsAndTitles(
     title_size : int
         Set size for the graph title. Defaults to 22.
 
-    Returns
-    -------
-    None
-
     """
     for tick in ax.xaxis.get_major_ticks():
         tick.label.set_fontsize(tick_size)
@@ -122,7 +114,7 @@ def setLabelsAndTitles(
     ax.set_title(title, fontsize=title_size)
 
 
-def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
+def set_legend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
     """Set legend for graphs.
 
     You can set the legend either at a previously specified location
@@ -155,10 +147,6 @@ def setLegend(ax, loc=0, lr_loc=1.05, ud_loc=1, size=16):
         Up-down location. Defaults to 1.
     size : int
         Scaling the legend. Defaults to 16.
-
-    Returns
-    -------
-    None
 
     """
     if loc == 0:

@@ -5,7 +5,7 @@ import tqdm
 
 
 def metro_hast(
-        tdata, N, simSetting, perturbSetting, simFunc, perturbFunc, scoreFunc
+        tdata, N, sim_setting, perturb_setting, sim_func, perturb_func, score_func
 ):
     """Metropolis hastings algorithm that samples parameter space.
 
@@ -15,49 +15,49 @@ def metro_hast(
         True dataset on which the score function calculates its value.
     N : int
         Number of iterations the metropolist hastings algorithm performs.
-    simSetting : dict
+    sim_setting : dict
         Dictionary of settings needed for the simulation.
-    perturbSetting : dict
+    perturb_setting : dict
         Dictionary of settings needed for the perturbation function.
-    simFunc : function
+    sim_func : function
         Function that performs the actual simulation with np.array output.
-    perturbFunc : function
+    perturb_func : function
         Function that perturbs variable inputs into simulation function.
-    scoreFunc : function
+    score_func : function
         Function that calculates a score from the fit between real data and
         simulated data.
 
     Returns
     -------
-    simSettings : np.array
+    sim_settings : np.array
         Set of variable settings that were sampled.
-    allData : np.array
+    all_data : np.array
         Generated data from the previous settings.
     scores : np.array
         Scores according to provided score function regarding data fit.
     """
     # start simulation
-    allData = [simFunc(**simSetting)[1]]
-    scores = [scoreFunc(tdata, allData[-1])]
-    simSettings = [simSetting]
+    all_data = [sim_func(**sim_setting)[1]]
+    scores = [score_func(tdata, all_data[-1])]
+    sim_settings = [sim_setting]
 
     for i in tqdm(range(N)):
         # Perturb parameters slightly
-        newSettings = perturbFunc(simSettings[-1].copy(), perturbSetting)
+        new_settings = perturb_func(sim_settings[-1].copy(), perturb_setting)
         # Run simulation
-        newData = simFunc(**newSettings)[1]
+        new_data = sim_func(**new_settings)[1]
         # Calculate score
-        newScore = scoreFunc(tdata, newData)
+        new_score = score_func(tdata, new_data)
         # See if score is better than the last iteration and keep if it is
-        if newScore <= scores[-1]:
-            simSettings.append(newSettings)
-            allData.append(newData)
-            scores.append(newScore)
+        if new_score <= scores[-1]:
+            sim_settings.append(new_settings)
+            all_data.append(new_data)
+            scores.append(new_score)
         # Or else give a random chance to still be accepted
         else:
             random = np.random.rand()
-            if random < scores[-1] / newScore:
-                simSettings.append(newSettings)
-                allData.append(newData)
-                scores.append(newScore)
-    return np.array(simSettings), np.array(allData), np.array(scores)
+            if random < scores[-1] / new_score:
+                sim_settings.append(new_settings)
+                all_data.append(new_data)
+                scores.append(new_score)
+    return np.array(sim_settings), np.array(all_data), np.array(scores)

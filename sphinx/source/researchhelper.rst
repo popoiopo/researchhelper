@@ -9,6 +9,7 @@ Subpackages
 
    researchhelper.analyse
    researchhelper.datastructures
+   researchhelper.decorators
    researchhelper.modeling
    researchhelper.optimize
    researchhelper.processdata
