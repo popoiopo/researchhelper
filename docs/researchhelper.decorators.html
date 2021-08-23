@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>researchhelper.analyse package &mdash; ResearchHelper 0.1.2 documentation</title>
+  <title>researchhelper.decorators package &mdash; ResearchHelper 0.1.2 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="researchhelper.datastructures package" href="researchhelper.datastructures.html" />
-    <link rel="prev" title="researchhelper package" href="researchhelper.html" /> 
+    <link rel="next" title="researchhelper.modeling package" href="researchhelper.modeling.html" />
+    <link rel="prev" title="researchhelper.datastructures package" href="researchhelper.datastructures.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,9 +90,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">researchhelper</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="researchhelper.html">researchhelper package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="researchhelper.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">researchhelper.analyse package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.analyse.html">researchhelper.analyse package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.datastructures.html">researchhelper.datastructures package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="researchhelper.decorators.html">researchhelper.decorators package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">researchhelper.decorators package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.modeling.html">researchhelper.modeling package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.optimize.html">researchhelper.optimize package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.processdata.html">researchhelper.processdata package</a></li>
@@ -157,13 +157,13 @@
         
           <li><a href="researchhelper.html">researchhelper package</a> &raquo;</li>
         
-      <li>researchhelper.analyse package</li>
+      <li>researchhelper.decorators package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/researchhelper.analyse.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/researchhelper.decorators.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,44 +176,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="researchhelper-analyse-package">
-<h1>researchhelper.analyse package<a class="headerlink" href="#researchhelper-analyse-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="researchhelper-decorators-package">
+<h1>researchhelper.decorators package<a class="headerlink" href="#researchhelper-decorators-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-researchhelper.analyse.distributions">
-<span id="researchhelper-analyse-distributions-module"></span><h2>researchhelper.analyse.distributions module<a class="headerlink" href="#module-researchhelper.analyse.distributions" title="Permalink to this headline">¶</a></h2>
-<p>All functionality pertaining to distribution analysis.</p>
+<div class="section" id="module-researchhelper.decorators.decorate">
+<span id="researchhelper-decorators-decorate-module"></span><h2>researchhelper.decorators.decorate module<a class="headerlink" href="#module-researchhelper.decorators.decorate" title="Permalink to this headline">¶</a></h2>
+<p>In this file we hold all useful decorators that we develop over time.</p>
+<p>For hints check:
+<a class="reference external" href="https://betterprogramming.pub/python-decorators-5-advanced-features-to-know-17dd9be7517b">https://betterprogramming.pub/python-decorators-5-advanced-features-to-know-17dd9be7517b</a></p>
 <dl class="py function">
-<dt id="researchhelper.analyse.distributions.hpd_grid">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.analyse.distributions.</span></code><code class="sig-name descname"><span class="pre">hpd_grid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roundto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.analyse.distributions.hpd_grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate highest posterior density (HPD) of array for given alpha.</p>
-<p>The HPD is the minimum width Bayesian credible interval (BCI).
-The function works for multimodal distributions, returning more than one mode</p>
+<dt id="researchhelper.decorators.decorate.logging_time">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.decorators.decorate.</span></code><code class="sig-name descname"><span class="pre">logging_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.decorators.decorate.logging_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorate inner function and log time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sample</strong> (<em>Numpy array</em><em> or </em><em>python list</em>) – An array containing MCMC samples</p></li>
-<li><p><strong>alpha</strong> (<em>float</em>) – Desired probability of type I error (defaults to 0.05)</p></li>
-<li><p><strong>roundto</strong> (<em>integer</em>) – Number of digits after the decimal point for the results (Default value = 2)</p></li>
+<li><p><strong>func</strong> (<em>Function</em>) – Decorate function such that it prints the elapsed runtime.</p></li>
+<li><p><strong>unit</strong> (<em>str</em>) – Time constant in which you want to see how long the operation took.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>hpd</strong> (<em>np.array</em>) – Highest Posterior Density</p></li>
-<li><p><strong>x</strong> (<em>list()</em>) – x-values of the Kernel Density Estimation (KDE)</p></li>
-<li><p><strong>y</strong> (<em>list()</em>) – y-values of the KDE</p></li>
-<li><p><strong>modes</strong> (<em>list()</em>) – List of locations from the modes of the distribution. Usually one
-location, but also finds 2 if bimodal.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>logger</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Inner function of the wrapper.</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="module-researchhelper.analyse">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-researchhelper.analyse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-researchhelper.decorators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-researchhelper.decorators" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -223,8 +218,8 @@ location, but also finds 2 if bimodal.</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="researchhelper.datastructures.html" class="btn btn-neutral float-right" title="researchhelper.datastructures package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="researchhelper.html" class="btn btn-neutral float-left" title="researchhelper package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="researchhelper.modeling.html" class="btn btn-neutral float-right" title="researchhelper.modeling package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="researchhelper.datastructures.html" class="btn btn-neutral float-left" title="researchhelper.datastructures package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

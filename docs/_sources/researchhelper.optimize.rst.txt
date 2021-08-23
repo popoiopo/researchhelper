@@ -4,26 +4,26 @@ researchhelper.optimize package
 Submodules
 ----------
 
-researchhelper.optimize.functionalForms module
+researchhelper.optimize.functionalforms module
 ----------------------------------------------
 
-.. automodule:: researchhelper.optimize.functionalForms
+.. automodule:: researchhelper.optimize.functionalforms
    :members:
    :undoc-members:
    :show-inheritance:
 
-researchhelper.optimize.optimizeOrCalibrate module
---------------------------------------------------
+researchhelper.optimize.optimize\_or\_calibrate module
+------------------------------------------------------
 
-.. automodule:: researchhelper.optimize.optimizeOrCalibrate
+.. automodule:: researchhelper.optimize.optimize_or_calibrate
    :members:
    :undoc-members:
    :show-inheritance:
 
-researchhelper.optimize.scoreFunctions module
+researchhelper.optimize.scorefunctions module
 ---------------------------------------------
 
-.. automodule:: researchhelper.optimize.scoreFunctions
+.. automodule:: researchhelper.optimize.scorefunctions
    :members:
    :undoc-members:
    :show-inheritance:

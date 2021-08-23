@@ -92,6 +92,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="researchhelper.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.analyse.html">researchhelper.analyse package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.datastructures.html">researchhelper.datastructures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.decorators.html">researchhelper.decorators package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.modeling.html">researchhelper.modeling package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.optimize.html">researchhelper.optimize package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.processdata.html">researchhelper.processdata package</a></li>
@@ -184,8 +185,37 @@
 <span id="researchhelper-visualize-general-formatting-module"></span><h2>researchhelper.visualize.general_formatting module<a class="headerlink" href="#module-researchhelper.visualize.general_formatting" title="Permalink to this headline">¶</a></h2>
 <p>Visualization helper functions and graphing.</p>
 <dl class="py function">
-<dt id="researchhelper.visualize.general_formatting.setLabelsAndTitles">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">setLabelsAndTitles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.setLabelsAndTitles" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.visualize.general_formatting.set_frame">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">set_frame</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_major_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_minor_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_major_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_minor_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.set_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement helper function to standardize matplotlib graphs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>matplotlib axis object</em>) – Standard matplotlib axis object.
+E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
+<li><p><strong>x_minor_td</strong> (<em>int</em>) – Set grid minor tick distance.
+This is in relation to the major grid. So a value of 2 result in
+there being 1 extra minor gridline halfway the major lines. 3, means
+at one-third, and two-thirds a minor line, etc. Defaults to 0.</p></li>
+<li><p><strong>x_major_td</strong> (<em>int</em>) – Set grid major tick distance. Sets major
+gridlines on multiples of this value. Defaults to 0.</p></li>
+<li><p><strong>y_major_td</strong> (<em>int</em>) – Set locators for grid. See x_minor_td.
+Defaults to 0.</p></li>
+<li><p><strong>y_minor_td</strong> (<em>int</em>) – Set locators for grid. See x_major_td.
+Defaults to 0.</p></li>
+<li><p><strong>x_lim</strong> (<em>int</em>) – Viewport limit on x-axis. Defaults to 0.</p></li>
+<li><p><strong>y_lim</strong> (<em>int</em>) – Viewport limit on y-axis. Defaults to 0.</p></li>
+<li><p><strong>lw</strong> (<em>int</em>) – Line width of the grid. Defaults to 2.</p></li>
+<li><p><strong>major_alpha</strong> (<em>float</em>) – Set alpha of major gridlines. Defaults to 0.9.</p></li>
+<li><p><strong>minor_alpha</strong> (<em>float</em>) – Set alpha of minor gridlines. Defaults to 0.7.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="researchhelper.visualize.general_formatting.set_labels_and_titles">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">set_labels_and_titles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.set_labels_and_titles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the labels and titles of the graph including it’s (tick)sizes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -200,18 +230,12 @@ E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
 <li><p><strong>title_size</strong> (<em>int</em>) – Set size for the graph title. Defaults to 22.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.visualize.general_formatting.setLegend">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">setLegend</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ud_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.setLegend" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.visualize.general_formatting.set_legend">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">set_legend</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ud_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.set_legend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set legend for graphs.</p>
 <p>You can set the legend either at a previously specified location
 by setting the loc, or a tuple made from lr_loc and ud_loc.</p>
@@ -239,47 +263,6 @@ location. Defaults to 0.</p></li>
 <li><p><strong>ud_loc</strong> (<em>int</em>) – Up-down location. Defaults to 1.</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – Scaling the legend. Defaults to 16.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="researchhelper.visualize.general_formatting.setStandardFrame">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.general_formatting.</span></code><code class="sig-name descname"><span class="pre">setStandardFrame</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_major_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_minor_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_major_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_minor_td</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor_alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.general_formatting.setStandardFrame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Implement helper function to standardize matplotlib graphs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ax</strong> (<em>matplotlib axis object</em>) – Standard matplotlib axis object.
-E.g., as from output of <cite>fig, ax = plt.subplots()</cite></p></li>
-<li><p><strong>x_minor_td</strong> (<em>int</em>) – Set grid minor tick distance.
-This is in relation to the major grid. So a value of 2 result in
-there being 1 extra minor gridline halfway the major lines. 3, means
-at one-third, and two-thirds a minor line, etc. Defaults to 0.</p></li>
-<li><p><strong>x_major_td</strong> (<em>int</em>) – Set grid major tick distance. Sets major
-gridlines on multiples of this value. Defaults to 0.</p></li>
-<li><p><strong>y_major_td</strong> (<em>int</em>) – Set locators for grid. See x_minor_td.
-Defaults to 0.</p></li>
-<li><p><strong>y_minor_td</strong> (<em>int</em>) – Set locators for grid. See x_major_td.
-Defaults to 0.</p></li>
-<li><p><strong>x_lim</strong> (<em>int</em>) – Viewport limit on x-axis. Defaults to 0.</p></li>
-<li><p><strong>y_lim</strong> (<em>int</em>) – Viewport limit on y-axis. Defaults to 0.</p></li>
-<li><p><strong>lw</strong> (<em>int</em>) – Line width of the grid. Defaults to 2.</p></li>
-<li><p><strong>major_alpha</strong> (<em>float</em>) – Set alpha of major gridlines. Defaults to 0.9.</p></li>
-<li><p><strong>minor_alpha</strong> (<em>float</em>) – Set alpha of minor gridlines. Defaults to 0.7.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -353,8 +336,8 @@ heatmap is plotted. If not provided, use current axes or create a new one. Defau
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.visualize.networks.nxNetworkMP4">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.networks.</span></code><code class="sig-name descname"><span class="pre">nxNetworkMP4</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_inactive_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.networks.nxNetworkMP4" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.visualize.networks.nx_network_mp4">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.networks.</span></code><code class="sig-name descname"><span class="pre">nx_network_mp4</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_inactive_nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.networks.nx_network_mp4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an MP4 from the network dynamics over time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -367,30 +350,6 @@ heatmap is plotted. If not provided, use current axes or create a new one. Defau
 <li><p><strong>save_path</strong> (<em>str</em>) – Where do you want to save your mp4?</p></li>
 <li><p><strong>remove_inactive_nodes</strong> (<em>bool</em>) – True to remove inactive nodes.
 Otherwise full nodelist is always visible. Defaults to False.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="researchhelper.visualize.networks.plotHeatmaps">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.networks.</span></code><code class="sig-name descname"><span class="pre">plotHeatmaps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suptitle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Degree</span> <span class="pre">measures</span> <span class="pre">over</span> <span class="pre">time'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'centralities.png'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.networks.plotHeatmaps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot network heatmap centrality mappings changing over time.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>gs</strong> (<em>List</em><em>[</em><em>nx.Graph</em><em>]</em>) – List of networkx graphs over time.</p></li>
-<li><p><strong>dm</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>nx.__centrality function</em><em>]</em><em>]</em>) – 2d list of centrality measures.
-Shape will be same as grid for heatmap visualizations</p></li>
-<li><p><strong>cmaps</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>matplotlib colormaps</em><em>]</em><em>]</em>) – 2d list of same shape as dm.</p></li>
-<li><p><strong>suptitle</strong> – (Default value = “Degree measures over time”)</p></li>
-<li><p><strong>path</strong> – (Default value = “centralities.png”)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -416,6 +375,30 @@ Shape will be same as grid for heatmap visualizations</p></li>
 <li><p><strong>with_labels</strong> (<em>boolean</em>) – True or false boolean on whether or not to show labels.
 (Default value = False)</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – Title of the plot. (Default value = ‘’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="researchhelper.visualize.networks.plot_heatmaps">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.visualize.networks.</span></code><code class="sig-name descname"><span class="pre">plot_heatmaps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suptitle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Degree</span> <span class="pre">measures</span> <span class="pre">over</span> <span class="pre">time'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'centralities.png'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.visualize.networks.plot_heatmaps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot network heatmap centrality mappings changing over time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gs</strong> (<em>List</em><em>[</em><em>nx.Graph</em><em>]</em>) – List of networkx graphs over time.</p></li>
+<li><p><strong>dm</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>nx.__centrality function</em><em>]</em><em>]</em>) – 2d list of centrality measures.
+Shape will be same as grid for heatmap visualizations</p></li>
+<li><p><strong>cmaps</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>matplotlib colormaps</em><em>]</em><em>]</em>) – 2d list of same shape as dm.</p></li>
+<li><p><strong>suptitle</strong> – (Default value = “Degree measures over time”)</p></li>
+<li><p><strong>path</strong> – (Default value = “centralities.png”)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

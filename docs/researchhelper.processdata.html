@@ -92,6 +92,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="researchhelper.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.analyse.html">researchhelper.analyse package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.datastructures.html">researchhelper.datastructures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="researchhelper.decorators.html">researchhelper.decorators package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.modeling.html">researchhelper.modeling package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="researchhelper.optimize.html">researchhelper.optimize package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">researchhelper.processdata package</a></li>
@@ -206,8 +207,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.processdata.dataproc.splitData">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.processdata.dataproc.</span></code><code class="sig-name descname"><span class="pre">splitData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction_train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'time'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.processdata.dataproc.splitData" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.processdata.dataproc.split_data">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.processdata.dataproc.</span></code><code class="sig-name descname"><span class="pre">split_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction_train</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'time'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.processdata.dataproc.split_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split data into seen (training set) and unseen (test set) data.</p>
 <p>Returns two sets of equal dimensions with NaN at the places where
 there is no data in that set. The two are complimentary.</p>
@@ -226,6 +227,30 @@ there is no data in that set. The two are complimentary.</p>
 <li><p><strong>test</strong> (<em>np.array</em>) – Test set.</p></li>
 </ul>
 </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-researchhelper.processdata.networks">
+<span id="researchhelper-processdata-networks-module"></span><h2>researchhelper.processdata.networks module<a class="headerlink" href="#module-researchhelper.processdata.networks" title="Permalink to this headline">¶</a></h2>
+<p>Process network data.</p>
+<dl class="py function">
+<dt id="researchhelper.processdata.networks.nx_network">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.processdata.networks.</span></code><code class="sig-name descname"><span class="pre">nx_network</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.processdata.networks.nx_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list in networkX format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_type</strong> (<em>str</em>) – Filertype string as from <a class="reference external" href="https://www.baschatel.nl/researchhelper/researchhelper.processdata.html#module-researchhelper.processdata.timehandeling">researchhelper.processdata.timehandeling.filterTimeStamps.</a>.`</p></li>
+<li><p><strong>**kwargs</strong> (<em>dict</em>) – Dictionary with arguments for the filterTimeStamps function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>graph</strong> – A networkx graph from the provided relations object based on timestamps.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nx.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,25 +280,25 @@ there is no data in that set. The two are complimentary.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="researchhelper.processdata.timehandeling.filterTimeStamps">
-<code class="sig-prename descclassname"><span class="pre">researchhelper.processdata.timehandeling.</span></code><code class="sig-name descname"><span class="pre">filterTimeStamps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filterType</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.processdata.timehandeling.filterTimeStamps" title="Permalink to this definition">¶</a></dt>
+<dt id="researchhelper.processdata.timehandeling.filter_timestamps">
+<code class="sig-prename descclassname"><span class="pre">researchhelper.processdata.timehandeling.</span></code><code class="sig-name descname"><span class="pre">filter_timestamps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#researchhelper.processdata.timehandeling.filter_timestamps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter dates by their timestamps.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>relations</strong> (<em>List</em><em>[</em><a class="reference internal" href="researchhelper.datastructures.html#researchhelper.datastructures.networks.Relationship" title="researchhelper.datastructures.networks.Relationship"><em>Relationship</em></a>) – List containing the Relationship
 pydantic dataclass. (see dataStructures.py for dataclass definition)</p></li>
-<li><p><strong>filterType</strong> (<em>str</em>) – Information on how to filter.
+<li><p><strong>filter_type</strong> (<em>str</em>) – Information on how to filter.
 Can be [“betweenWeeks”, “inWeek”, “betweenDates”, “all”]</p></li>
 <li><p><strong>kwargs</strong> (<em>dict</em>) – Provide {“begin”: val, “end”: val} in week numbers or
 dates for “betweenWeeks” or “betweenDates” respectively. And provide
 {“week”: val} for “inWeek” to filter all in that specific week.</p></li>
-<li><p><strong>filterType</strong> – How do you want to filter the relations? Possible input is:
+<li><p><strong>filter_type</strong> – How do you want to filter the relations? Possible input is:
 “betweenWeeks” - Provide kwargs[“begin], kwargs[“end”] in integer weekdays.
 “inWeek” - Provide kwargs[“week”] for filtering out a specific week.
 “betweenDates” - Provide kwargs[“begin], kwargs[“end”] as dates to filter between dates.
 “all” - Get all relations back, no kwargs required.</p></li>
-<li><p><strong>**kwargs</strong> (<em>str</em><em> or </em><em>int</em>) – Input for filter, see filterType for more information.</p></li>
+<li><p><strong>**kwargs</strong> (<em>str</em><em> or </em><em>int</em>) – Input for filter, see filter_type for more information.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
